@@ -3,32 +3,18 @@
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/frontend/common/src",
     "prefix": "avans-nx-workshop",
-    "tags": [],
     "projectType": "library",
+    "tags": [],
     "targets": {
         "test": {
             "executor": "@nx/jest:jest",
             "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
             "options": {
-                "jestConfig": "libs/frontend/common/jest.config.ts",
-                "passWithNoTests": true
-            },
-            "configurations": {
-                "ci": {
-                    "ci": true,
-                    "codeCoverage": true
-                }
+                "jestConfig": "libs/frontend/common/jest.config.ts"
             }
         },
         "lint": {
-            "executor": "@nx/eslint:lint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": [
-                    "libs/frontend/common/**/*.ts",
-                    "libs/frontend/common/**/*.html"
-                ]
-            }
+            "executor": "@nx/eslint:lint"
         }
     }
 }
