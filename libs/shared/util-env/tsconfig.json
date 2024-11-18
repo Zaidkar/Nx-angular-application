@@ -1,7 +1,8 @@
 {
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
-        "module": "commonjs"
+        "module": "commonjs",
+        "_enabledBlockTypes": ["if", "for", "switch", "defer"]
     },
     "files": [],
     "include": [],

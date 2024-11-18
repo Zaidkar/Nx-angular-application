@@ -7,6 +7,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { FooterComponent } from './components/ui/footer/footer.component';
+import { FeaturesModule } from '@avans-nx-workshop/features';
+import { ListComponent } from './pages/list/list.component';
 
 @NgModule({
     declarations: [
@@ -14,13 +16,15 @@ import { FooterComponent } from './components/ui/footer/footer.component';
         DashboardComponent,
         AboutComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        ListComponent
     ],
     imports: [
         BrowserModule,
         RouterModule.forRoot(appRoutes, {
             initialNavigation: 'enabledBlocking'
-        })
+        }),
+        FeaturesModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -28,6 +28,13 @@
             "@avans-nx-workshop/backend/user": [
                 "libs/backend/user/src/index.ts"
             ],
+            "@avans-nx-workshop/common": ["libs/frontend/common/src/index.ts"],
+            "@avans-nx-workshop/features": [
+                "libs/frontend/features/src/index.ts"
+            ],
+            "@avans-nx-workshop/frontend/common/common": [
+                "libs/frontend/common/common/src/index.ts"
+            ],
             "@avans-nx-workshop/share-a-meal/auth": [
                 "libs/share-a-meal/auth/src/index.ts"
             ],
@@ -46,7 +53,8 @@
             "@avans-nx-workshop/shared/api": ["libs/shared/api/src/index.ts"],
             "@avans-nx-workshop/shared/util-env": [
                 "libs/shared/util-env/src/index.ts"
-            ]
+            ],
+            "@avans-nx-workshop/ui": ["libs/frontend/ui/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
