@@ -37,6 +37,11 @@ export interface IUserInfo extends IUserRegistration {
     role: UserRole;
     gender: UserGender;
     isActive: boolean;
+    favoriteGenres: string[];
+    topThreeGames: string[];
+    preferredPlatform: string;
+    country: string;
+    city: string;
 }
 
 /**

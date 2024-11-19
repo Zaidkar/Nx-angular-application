@@ -1,28 +1,16 @@
 <div class="component list">
     <div class="row">
-        <div class="col-8"><p>List works!</p></div>
-        <div class="col">
-            <a
-                class="btn btn-primary btn-sm float-right"
-                href="#"
-                role="button"
-                routerLink="new"
-                >New</a
-            >
+        <div class="col-8">
+            <h1>User list</h1>
         </div>
     </div>
 
-    <!-- Loading State -->
     <p *ngIf="!users">loading ...</p>
 
-    <!-- No Users Found -->
     <p *ngIf="users && users.length === 0">No users found</p>
 
-    <!-- Display Users -->
-    <table
-        class="table table-striped table-hover"
-        *ngIf="users && users.length > 0"
-    >
+
+    <table class="table table-striped table-hover" *ngIf="users && users.length > 0">
         <thead>
             <tr>
                 <th>Id</th>
@@ -32,7 +20,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let user of users">
-                <td>{{ user._id }}</td>
+                <td><a routerLink="{{user._id}}">{{ user._id }}</a></td>
                 <td>{{ user.name }}</td>
                 <td>{{ user.emailAddress }}</td>
             </tr>

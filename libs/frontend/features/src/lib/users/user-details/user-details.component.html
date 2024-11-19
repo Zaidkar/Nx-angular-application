@@ -1,1 +1,161 @@
-<p>user-details works!</p>
+<p *ngIf="!user">Loading...</p>
+
+<div *ngIf="user" class="container">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img [src]="user.profileImgUrl" alt="User Profile" class="rounded-circle" width="150" />
+                            <div class="mt-3">
+                                <h4>{{ user.name }}</h4>
+                                <p class="text-secondary mb-1">
+                                    {{ user.role | titlecase }}
+                                </p>
+                                <p class="text-muted font-size-sm">
+                                    {{ user.emailAddress }}
+                                </p>
+                                <button class="btn btn-primary">Like collections</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Status:</strong>
+                            <span [ngClass]="user.isActive ? 'text-success' : 'text-danger'">
+                                {{ user.isActive ? 'Active' : 'Inactive' }}
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Gender:</strong> {{ user.gender | titlecase }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Role:</strong> {{ user.role | titlecase }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Country:</strong> {{ user.country }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>City:</strong> {{ user.city }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-8">
+
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.name }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.emailAddress }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Role</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.role | titlecase }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Active</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.isActive ? 'Yes' : 'No' }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Favorite Genres</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.favoriteGenres.join(', ') }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Top Three Games</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.topThreeGames.join(', ') }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Preferred Platform</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ user.preferredPlatform }}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Collections</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Collection 1</h6>
+                                        <p class="card-text">Coming soon!</p>
+                                        <button class="btn btn-primary">Like</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Collection 2</h6>
+                                        <p class="card-text">Coming soon!</p>
+                                        <button class="btn btn-primary">Like</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Collection 3</h6>
+                                        <p class="card-text">Coming soon!</p>
+                                        <button class="btn btn-primary">Like</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,6 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { FooterComponent } from './components/ui/footer/footer.component';
 import { FeaturesModule } from '@avans-nx-workshop/features';
-import { ListComponent } from './pages/list/list.component';
 
 @NgModule({
     declarations: [
@@ -16,8 +15,7 @@ import { ListComponent } from './pages/list/list.component';
         DashboardComponent,
         AboutComponent,
         HeaderComponent,
-        FooterComponent,
-        ListComponent
+        FooterComponent
     ],
     imports: [
         BrowserModule,
