@@ -66,7 +66,7 @@
             "style": "css"
         }
     },
-    "neverConnectToCloud": false,
+    "neverConnectToCloud": true,
     "useInferencePlugins": false,
     "defaultBase": "master",
     "useLegacyCache": true
