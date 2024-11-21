@@ -49,6 +49,12 @@ export class User implements IUser {
     })
     profileImgUrl!: string;
 
+    favoriteGenres: string[] = [];
+    topThreeGames: string[] = [];
+    preferredPlatform: string = '';
+    country: string = '';
+    city: string = '';
+
     @Prop({
         required: false,
         type: String,

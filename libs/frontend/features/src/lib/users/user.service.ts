@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { IUserInfo, UserGender, UserRole } from '@avans-nx-workshop/shared/api';
+import { map, Observable, of } from 'rxjs';
+import {
+    ApiResponse,
+    IUserInfo,
+    UserGender,
+    UserRole
+} from '@avans-nx-workshop/shared/api';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '@avans-nx-workshop/shared/util-env';
 
 @Injectable({
     providedIn: 'root'
@@ -64,22 +71,31 @@ export class UserService {
             city: 'London'
         }
     ];
-    constructor() {
+    constructor(private http: HttpClient) {
         console.log('Service constructor aangeroepen');
     }
-
     getUsers(): IUserInfo[] {
         console.log('getUsers aangeroepen');
         return this.users;
     }
 
     getUsersAsObservable(): Observable<IUserInfo[]> {
-        console.log('getUsersAsObservable aangeroepen');
-        return of(this.users);
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + '/user')
+            .pipe(map((response) => response.results));
     }
 
     getUserById(_id: string): IUserInfo {
         console.log('getUserById aangeroepen');
         return this.users.filter((user) => user._id === _id)[0];
+    }
+
+    getUserByIdAsObservable(id: string): Observable<IUserInfo> {
+        console.log('getUserByIdAsObservable aangeroepen');
+        // 'of' is een rxjs operator die een Observable
+        // maakt van de gegeven data.
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + '/user/' + id)
+            .pipe(map((response) => response.results));
     }
 }

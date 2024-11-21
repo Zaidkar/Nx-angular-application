@@ -25,6 +25,11 @@ export class CreateUserDto implements IUserRegistration {
 }
 
 export class UpsertUserDto implements IUpsertUser {
+    favoriteGenres: string[] = [];
+    topThreeGames: string[] = [];
+    preferredPlatform: string = '';
+    country: string = '';
+    city: string = '';
     _id!: Id;
 
     @IsString()
