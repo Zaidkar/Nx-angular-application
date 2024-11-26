@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IUserInfo, UserGender, UserRole } from '@avans-nx-workshop/shared/api';
+import { IUserInfo } from '@avans-nx-workshop/shared/api';
 import { UserService } from '../user.service';
 import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'avans-nx-workshop-user-list',
     templateUrl: './user-list.component.html',
-    styleUrls: ['./user-list.component.css']
+    styleUrls: []
 })
 export class UserListComponent implements OnInit, OnDestroy {
     users?: IUserInfo[];

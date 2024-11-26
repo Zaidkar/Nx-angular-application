@@ -98,4 +98,8 @@ export class UserService {
             .get<ApiResponse<any>>(environment.dataApiUrl + '/user/' + id)
             .pipe(map((response) => response.results));
     }
+
+    //export class userservice extends entityservice<IUserInfo> { readonly users?: IUserInfo[];
+    // constructor(http: HttpClient) { super(http, environment.dataurlapi '/user'); } }
+    //check entityservice.ts in share-a-meal/common/src/lib/entity/entity.service.ts
 }

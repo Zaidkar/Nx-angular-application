@@ -1,0 +1,65 @@
+<h1>Game edit</h1>
+<p>Game edit works</p>
+
+<form
+    *ngIf="game"
+    #gameEditForm="ngForm"
+    (ngSubmit)="gameEditForm.form.valid && onSubmit(game)"
+    novalidate
+>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="gameTitle"
+                    name="gameTitle"
+                    #gameTitle="ngModel"
+                    [(ngModel)]="game.title"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    class="form-control"
+                    id="gameDescription"
+                    name="description"
+                    [(ngModel)]="game.description"
+                    required
+                ></textarea>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+        <div class="col-3">
+            <pre
+                >{{ game | json }}
+        </pre
+            >
+        </div>
+        <div class="col-4">
+            <pre>
+                gameEditForm-valid: {{ gameEditForm.form.valid }}
+                gameEditForm-dirty: {{ gameEditForm.form.dirty }}
+                gameEditForm-touched: {{ gameEditForm.form.touched }}
+                gameTitle-valid: {{ gameTitle.valid }}
+                gameTitle-dirty: {{ gameTitle.dirty }}
+                gameTitle-touched: {{ gameTitle.touched }}
+
+        </pre
+            >
+        </div>
+    </div>
+
+    <button
+        type="submit"
+        [disabled]="!gameEditForm.valid"
+        class="btn btn-success"
+        e
+    >
+        Submit
+    </button>
+</form>

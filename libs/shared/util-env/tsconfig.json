@@ -1,8 +1,10 @@
 {
+    "angularCompilerOptions": {
+        "_enabledBlockTypes": ["if", "for", "switch", "defer"]
+    },
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
-        "module": "commonjs",
-        "_enabledBlockTypes": ["if", "for", "switch", "defer"]
+        "module": "commonjs"
     },
     "files": [],
     "include": [],
