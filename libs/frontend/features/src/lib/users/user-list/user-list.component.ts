@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
     selector: 'avans-nx-workshop-user-list',
     templateUrl: './user-list.component.html',
-    styleUrls: ['./user-list.component.css']
+    styleUrls: []
 })
 export class UserListComponent implements OnInit, OnDestroy {
     users?: IUserInfo[];
@@ -16,7 +16,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.sub = this.userService
-            .getUsersAsObservable()
+            .getUsers()
             .subscribe((users) => (this.users = users));
     }
 
