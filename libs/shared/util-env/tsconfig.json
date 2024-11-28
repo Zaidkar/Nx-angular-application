@@ -4,7 +4,8 @@
     },
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
-        "module": "commonjs"
+        "outDir": "../../../dist/out-tsc/libs/shared/util-env",
+        "types": []
     },
     "files": [],
     "include": [],

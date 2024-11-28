@@ -1,4 +1,10 @@
-import { IsNotEmpty, IsString, IsBoolean, IsOptional } from 'class-validator';
+import {
+    IsNotEmpty,
+    IsString,
+    IsBoolean,
+    IsOptional,
+    IsArray
+} from 'class-validator';
 import {
     // ICreateUser,
     IUpdateUser,
@@ -25,11 +31,26 @@ export class CreateUserDto implements IUserRegistration {
 }
 
 export class UpsertUserDto implements IUpsertUser {
+    @IsArray()
+    @IsNotEmpty()
     favoriteGenres: string[] = [];
+
+    @IsArray()
+    @IsNotEmpty()
     topThreeGames: string[] = [];
+
+    @IsString()
+    @IsNotEmpty()
     preferredPlatform: string = '';
+
+    @IsString()
+    @IsNotEmpty()
     country: string = '';
+
+    @IsString()
+    @IsNotEmpty()
     city: string = '';
+
     _id!: Id;
 
     @IsString()
@@ -51,10 +72,6 @@ export class UpsertUserDto implements IUpsertUser {
     @IsString()
     @IsNotEmpty()
     profileImgUrl = '';
-
-    @IsString()
-    @IsNotEmpty()
-    meals: Meal[] = [];
 
     @IsString()
     @IsNotEmpty()

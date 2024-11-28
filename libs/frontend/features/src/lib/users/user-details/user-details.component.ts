@@ -23,7 +23,7 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
         this.sub = this.route.paramMap.subscribe((params) => {
             this.userId = params.get('id');
             this.userService
-                .getUserByIdAsObservable(String(this.userId))
+                .getUserById(String(this.userId))
                 .subscribe((user) => (this.user = user));
         });
     }
