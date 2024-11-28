@@ -13,7 +13,7 @@ export const appRoutes: Route[] = [
     { path: 'game/new', component: GameEditComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'users', component: UserListComponent },
-    { path: 'users/:id', component: UserDetailsComponent },
+    { path: 'users/:id', pathMatch: 'full', component: UserDetailsComponent },
     { path: 'users/:id/edit', component: UserEditComponent },
     { path: 'about', component: AboutComponent },
     { path: '**', redirectTo: 'dashboard' }

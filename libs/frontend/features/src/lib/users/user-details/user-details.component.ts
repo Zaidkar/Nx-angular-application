@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { IUserInfo } from '@avans-nx-workshop/shared/api';
 import { Observable, Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'avans-nx-workshop-user-details',
@@ -16,7 +16,8 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
 
     constructor(
         private userService: UserService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private router: Router
     ) {}
 
     ngOnInit(): void {
@@ -32,5 +33,14 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
         if (this.sub) {
             this.sub.unsubscribe();
         }
+    }
+
+    deleteUser(id: string): void {
+        this.sub?.add(
+            this.userService.deleteUser(id).subscribe((result) => {
+                console.log(result);
+                this.router.navigate(['..'], { relativeTo: this.route });
+            })
+        );
     }
 }

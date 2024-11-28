@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { environment } from '@avans-nx-workshop/shared/util-env';
 import {
     ApiResponse,
@@ -44,11 +44,18 @@ export class UserService {
         );
     }
 
-    deleteUser(_id: string): Observable<void> {
-        return this.http.delete<void>(`${environment.dataApiUrl}/user/${_id}`);
-    }
+    deleteUser(id: string): Observable<IUserInfo> {
+        return this.http
+            .delete<IUserInfo>(`${environment.dataApiUrl}/user/${id}`)
+            .pipe(
+                catchError((error: HttpErrorResponse) => {
+                    console.error('Error deleting user:', error);
+                    return throwError(error);
+                })
+            );
 
-    //export class userservice extends entityservice<IUserInfo> { readonly users?: IUserInfo[];
-    // constructor(http: HttpClient) { super(http, environment.dataurlapi '/user'); } }
-    //check entityservice.ts in share-a-meal/common/src/lib/entity/entity.service.ts
+        //export class userservice extends entityservice<IUserInfo> { readonly users?: IUserInfo[];
+        // constructor(http: HttpClient) { super(http, environment.dataurlapi '/user'); } }
+        //check entityservice.ts in share-a-meal/common/src/lib/entity/entity.service.ts
+    }
 }
