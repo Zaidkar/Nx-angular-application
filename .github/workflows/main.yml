@@ -12,16 +12,16 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-
+        name: Build and zip apps from /dist
         steps:
             - uses: actions/checkout@v4
 
             - name: Set up Node.js version
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: '18.x'
 
-            - name: npm install and build
+            - name: npm install, build, and test
               run: |
                   npm install
                   npm run build --if-present
@@ -29,35 +29,36 @@ jobs:
             - name: Zip artifacts for deployment
               run: |
                   echo ${GITHUB_WORKSPACE}
-                  cd ${GITHUB_WORKSPACE}/dist/apps/backend-api/ && zip ${GITHUB_WORKSPACE}/backend-api-release.zip ./* -r
-                  cd ${GITHUB_WORKSPACE}/dist/apps/frontend-app/ && zip ${GITHUB_WORKSPACE}/frontend-app-release.zip ./* -r
+                  cd ${GITHUB_WORKSPACE}/dist/apps/data-api/ && zip ${GITHUB_WORKSPACE}/data-api-release.zip ./* -r
+                  cd ${GITHUB_WORKSPACE}/dist/apps/my-app/ && zip ${GITHUB_WORKSPACE}/my-app-release.zip ./* -r
 
-            - name: Upload frontend-app artifact for deployment job
-              uses: actions/upload-artifact@v3
+            - name: Upload my-app artifact for deployment job
+              uses: actions/upload-artifact@v4
               with:
-                  name: frontend-app
-                  path: frontend-app-release.zip
+                  name: my-app
+                  path: my-app-release.zip
 
-            - name: Upload backend-api artifact for deployment job
-              uses: actions/upload-artifact@v3
+            - name: Upload data-api artifact for deployment job
+              uses: actions/upload-artifact@v4
               with:
-                  name: backend-api
-                  path: backend-api-release.zip
+                  name: data-api
+                  path: data-api-release.zip
 
-    deploy-frontend-app:
+    deploy-my-app:
         runs-on: ubuntu-latest
+        name: Deploy Angular Frontend
         needs: build
         environment:
             name: 'Production'
 
         steps:
             - name: Download artifact from build job
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
-                  name: frontend-app
+                  name: my-app
 
             - name: Unzip artifact for deployment
-              run: unzip frontend-app-release.zip
+              run: unzip my-app-release.zip
 
             - name: Deploy to static azure web app
               id: builddeploy
@@ -68,10 +69,12 @@ jobs:
                   action: 'upload'
                   app_location: '/' # App source code path
                   api_location: '' # Api source code path - optional
-                  output_location: '' # Built app content directory - optional
+                  output_location: 'dist/apps/my-app' # Built app content directory - optional
+                  github_id_token: ${{ steps.idtoken.outputs.result }}
 
-    deploy-backend-api:
+    deploy-data-api:
         runs-on: ubuntu-latest
+        name: Deploy NestJs data-api backend
         needs: build
         environment:
             name: 'Production'
@@ -79,21 +82,21 @@ jobs:
 
         steps:
             - name: Download artifact from build job
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
-                  name: backend-api
+                  name: data-api
 
             - name: Unzip artifact for deployment
-              run: unzip backend-api-release.zip
+              run: unzip data-api-release.zip
 
             - name: Install dependencies
               run: npm install
 
             - name: 'Deploy to Azure Web App'
               id: deploy-to-webapp
-              uses: azure/webapps-deploy@v2
+              uses: azure/webapps-deploy@v3
               with:
-                  app-name: 'NxWorkshop'
+                  app-name: 'nx-workshop'
                   slot-name: 'Production'
-                  publish-profile: ${{ secrets.NEXTJS_PUBLISHPROFILE }}
+                  publish-profile: ${{ secrets.DATA_API_PUBLISHPROFILE }}
                   package: .
