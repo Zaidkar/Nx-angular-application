@@ -11,3 +11,4 @@ export const environment: IEnvironment = {
     MONGO_DB_CONNECTION_STRING:
         'mongodb+srv://nx:nxpassword@nx-applicatie.vs6sa.mongodb.net/nx-angular?retryWrites=true&w=majority&appName=Nx-angular'
 };
+//
