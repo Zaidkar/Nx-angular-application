@@ -7,10 +7,16 @@ import { RouterModule } from '@angular/router';
 import { UserService } from './users/user.service';
 import { provideHttpClient } from '@angular/common/http';
 import { GameEditComponent } from './game/game-edit/game-edit.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
-    declarations: [UserDetailsComponent, UserListComponent, GameEditComponent],
+    declarations: [
+        UserDetailsComponent,
+        UserListComponent,
+        GameEditComponent,
+        UserEditComponent
+    ],
     exports: [UserDetailsComponent, UserListComponent],
     providers: [UserService, provideHttpClient()]
 })

@@ -5,6 +5,8 @@ import { Id } from './id.type';
 
 export enum UserRole {
     Guest = 'Guest',
+    User = 'User',
+    Moderator = 'Moderator',
     Admin = 'Admin',
     Unknown = 'Unknown'
 }
