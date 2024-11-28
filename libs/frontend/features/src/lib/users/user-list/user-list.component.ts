@@ -1,34 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { IUser } from '@avans-nx-workshop/shared/api';
-import { UserService } from '@avans-nx-workshop/shared/api';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { IUserInfo } from '@avans-nx-workshop/shared/api';
+import { UserService } from '../user.service';
 import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'avans-nx-workshop-user-list',
     templateUrl: './user-list.component.html',
-    styles: []
+    styleUrls: []
 })
-export class UserListComponent implements OnInit {
-    users: IUser[] = [];
-    subscription?: Subscription;
+export class UserListComponent implements OnInit, OnDestroy {
+    users?: IUserInfo[];
+    sub?: Subscription;
 
     constructor(private userService: UserService) {}
 
     ngOnInit(): void {
-        // this.users = this.userService.getUsers();
-
-        this.subscription = this.userService
-            .getUsersAsObservable()
-            .subscribe((users) => {
-                this.users = users;
-            });
+        this.sub = this.userService
+            .getUsers()
+            .subscribe((users) => (this.users = users));
     }
 
     ngOnDestroy(): void {
-        if (this.subscription) {
-            this.subscription?.unsubscribe();
-            console.log('Unsub from userlist');
+        if (this.sub) {
+            this.sub.unsubscribe();
         }
-        console.log('UserListComponent destroyed');
     }
 }

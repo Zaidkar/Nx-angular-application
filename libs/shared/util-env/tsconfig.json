@@ -1,8 +1,11 @@
 {
+    "angularCompilerOptions": {
+        "_enabledBlockTypes": ["if", "for", "switch", "defer"]
+    },
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
-        "module": "commonjs",
-        "_enabledBlockTypes": ["if", "for", "switch", "defer"]
+        "outDir": "../../../dist/out-tsc/libs/shared/util-env",
+        "types": []
     },
     "files": [],
     "include": [],

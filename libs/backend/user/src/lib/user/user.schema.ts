@@ -51,6 +51,41 @@ export class User implements IUser {
 
     @Prop({
         required: false,
+        type: [String],
+        default: []
+    })
+    favoriteGenres: string[] = [];
+
+    @Prop({
+        required: false,
+        type: [String],
+        default: []
+    })
+    topThreeGames: string[] = [];
+
+    @Prop({
+        required: false,
+        type: String,
+        default: ''
+    })
+    preferredPlatform: string = '';
+
+    @Prop({
+        required: false,
+        type: String,
+        default: ''
+    })
+    country: string = '';
+
+    @Prop({
+        required: false,
+        type: String,
+        default: ''
+    })
+    city: string = '';
+
+    @Prop({
+        required: false,
         type: String,
         default: UserRole.Guest
     })
@@ -69,13 +104,6 @@ export class User implements IUser {
         default: true
     })
     isActive = true;
-
-    @Prop({
-        default: [],
-        type: [MongooseSchema.Types.ObjectId],
-        ref: 'Meal'
-    })
-    meals: IMeal[] = [];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

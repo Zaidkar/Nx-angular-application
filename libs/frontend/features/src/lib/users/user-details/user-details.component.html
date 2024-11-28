@@ -6,8 +6,16 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <img [src]="user.profileImgUrl" alt="User Profile" class="rounded-circle" width="150" />
+                        <div
+                            class="d-flex flex-column align-items-center text-center"
+                        >
+                            <img
+                                [src]="user.profileImgUrl"
+                                alt="User Profile"
+                                class="rounded-circle"
+                                width="150"
+                            />
+
                             <div class="mt-3">
                                 <h4>{{ user.name }}</h4>
                                 <p class="text-secondary mb-1">
@@ -16,7 +24,13 @@
                                 <p class="text-muted font-size-sm">
                                     {{ user.emailAddress }}
                                 </p>
-                                <button class="btn btn-primary">Like collections</button>
+
+                                <button
+                                    class="btn btn-warning"
+                                    [routerLink]="['/users', user._id, 'edit']"
+                                >
+                                    Edit
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -25,12 +39,19 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <strong>Status:</strong>
-                            <span [ngClass]="user.isActive ? 'text-success' : 'text-danger'">
+                            <span
+                                [ngClass]="
+                                    user.isActive
+                                        ? 'text-success'
+                                        : 'text-danger'
+                                "
+                            >
                                 {{ user.isActive ? 'Active' : 'Inactive' }}
                             </span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Gender:</strong> {{ user.gender | titlecase }}
+                            <strong>Gender:</strong>
+                            {{ user.gender | titlecase }}
                         </li>
                         <li class="list-group-item">
                             <strong>Role:</strong> {{ user.role | titlecase }}
@@ -45,11 +66,7 @@
                 </div>
             </div>
 
-
-
             <div class="col-md-8">
-
-
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="row">
@@ -114,47 +131,49 @@
                                 {{ user.preferredPlatform }}
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
 
                 <div class="card mt-3">
                     <div class="card-body">
-                        <h5 class="card-title">Collections</h5>
+                        <h5 class="card-title">Reviews</h5>
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Collection 1</h6>
+                                        <h6 class="card-title">Review 1</h6>
                                         <p class="card-text">Coming soon!</p>
-                                        <button class="btn btn-primary">Like</button>
+                                        <button class="btn btn-primary">
+                                            Read
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Collection 2</h6>
+                                        <h6 class="card-title">Review 2</h6>
                                         <p class="card-text">Coming soon!</p>
-                                        <button class="btn btn-primary">Like</button>
+                                        <button class="btn btn-primary">
+                                            Read
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Collection 3</h6>
+                                        <h6 class="card-title">Review 3</h6>
                                         <p class="card-text">Coming soon!</p>
-                                        <button class="btn btn-primary">Like</button>
+                                        <button class="btn btn-primary">
+                                            Read
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

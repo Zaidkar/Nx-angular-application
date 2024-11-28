@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 import { IUserInfo } from '@avans-nx-workshop/shared/api';
-import { UserService } from '@avans-nx-workshop/shared/api';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,8 +10,9 @@ import { ActivatedRoute } from '@angular/router';
     styles: []
 })
 export class UserDetailsComponent implements OnInit, OnDestroy {
+    userId: string | null = null;
     user?: IUserInfo;
-    subscription?: Subscription;
+    sub?: Subscription;
 
     constructor(
         private userService: UserService,
@@ -19,19 +20,17 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
     ) {}
 
     ngOnInit(): void {
-        this.subscription = this.route.paramMap.subscribe((params) => {
-            const userId = params.get('id');
-            if (userId) {
-                this.user = this.userService.getUserById(userId);
-            }
+        this.sub = this.route.paramMap.subscribe((params) => {
+            this.userId = params.get('id');
+            this.userService
+                .getUserById(String(this.userId))
+                .subscribe((user) => (this.user = user));
         });
     }
 
     ngOnDestroy(): void {
-        if (this.subscription) {
-            this.subscription.unsubscribe();
-            console.log('Unsub from userDetails');
+        if (this.sub) {
+            this.sub.unsubscribe();
         }
-        console.log('UserDetailsComponent destroyed');
     }
 }
