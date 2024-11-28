@@ -1,7 +1,6 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "_enabledBlockTypes": ["if", "for", "switch", "defer"],
         "rootDir": ".",
         "sourceMap": true,
         "declaration": false,
