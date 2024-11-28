@@ -1,44 +1,46 @@
-<h1>Game edit</h1>
+<h1>Game Edit</h1>
 <p>Game edit works</p>
 
-<form
-    *ngIf="game"
-    #gameEditForm="ngForm"
-    (ngSubmit)="gameEditForm.form.valid && onSubmit(game)"
-    novalidate
->
+<form *ngIf="game" #gameEditForm="ngForm" (ngSubmit)="gameEditForm.form.valid && onSubmit(game)" novalidate>
     <div class="row">
         <div class="col-4">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="gameTitle"
-                    name="gameTitle"
-                    #gameTitle="ngModel"
-                    [(ngModel)]="game.title"
-                    required
-                />
+                <input type="text" class="form-control" id="gameTitle" name="gameTitle" #gameTitle="ngModel"
+                    [(ngModel)]="game.title" required />
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea
-                    class="form-control"
-                    id="gameDescription"
-                    name="description"
-                    [(ngModel)]="game.description"
-                    required
-                ></textarea>
+                <textarea class="form-control" id="gameDescription" name="description" [(ngModel)]="game.description"
+                    required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="releaseDate">Release Date</label>
+                <input type="date" class="form-control" id="gameReleaseDate" name="releaseDate"
+                    [(ngModel)]="game.releaseDate" required />
+            </div>
+            <div class="form-group">
+                <label for="developer">Developer</label>
+                <input type="text" class="form-control" id="gameDeveloper" name="developer" [(ngModel)]="game.developer"
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="publisher">Publisher</label>
+                <input type="text" class="form-control" id="gamePublisher" name="publisher" [(ngModel)]="game.publisher"
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="platforms">Platforms</label>
+                <input type="text" class="form-control" id="gamePlatforms" name="platforms"
+                    [(ngModel)]="game.platforms" />
             </div>
         </div>
 
         <div class="col-1"></div>
         <div class="col-3">
-            <pre
-                >{{ game | json }}
-        </pre
-            >
+            <pre>
+                {{ game | json }}
+            </pre>
         </div>
         <div class="col-4">
             <pre>
@@ -48,18 +50,11 @@
                 gameTitle-valid: {{ gameTitle.valid }}
                 gameTitle-dirty: {{ gameTitle.dirty }}
                 gameTitle-touched: {{ gameTitle.touched }}
-
-        </pre
-            >
+            </pre>
         </div>
     </div>
 
-    <button
-        type="submit"
-        [disabled]="!gameEditForm.valid"
-        class="btn btn-success"
-        e
-    >
+    <button type="submit" [disabled]="!gameEditForm.valid" class="btn btn-success">
         Submit
     </button>
 </form>

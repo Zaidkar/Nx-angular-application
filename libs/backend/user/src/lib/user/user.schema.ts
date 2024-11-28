@@ -24,11 +24,11 @@ export class User implements IUser {
     name!: string;
 
     @Prop({
-        required: true,
+        required: false,
         select: false, // do not return password in select statements
         type: String
     })
-    password = '';
+    password = 'secret';
 
     @Prop({
         required: true,

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '@avans-nx-workshop/shared/util-env';
 import {
     ApiResponse,
+    IUpdateUser,
     IUserInfo,
     UserGender,
     UserRole
@@ -31,17 +32,21 @@ export class UserService {
     }
 
     createUser(user: IUserInfo): Observable<IUserInfo> {
-        return this.http.post<IUserInfo>(
-            `${environment.dataApiUrl}/user`,
-            user
-        );
+        return this.http
+            .post<ApiResponse<any>>(environment.dataApiUrl + '/user', user)
+            .pipe(map((response) => response.results));
     }
 
-    updateUser(_id: string, user: Partial<IUserInfo>): Observable<IUserInfo> {
-        return this.http.put<IUserInfo>(
-            `${environment.dataApiUrl}/user/${_id}`,
-            user
-        );
+    updateUser(user: IUpdateUser): Observable<IUserInfo> {
+        return this.http
+            .put<ApiResponse<any>>(
+                environment.dataApiUrl + '/user/' + user._id,
+                user
+            )
+            .pipe(
+                tap(console.log),
+                map((response) => response.results)
+            );
     }
 
     deleteUser(id: string): Observable<IUserInfo> {

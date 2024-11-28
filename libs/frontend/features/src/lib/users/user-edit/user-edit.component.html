@@ -6,7 +6,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex flex-column align-items-center text-center">
-                        <img [src]="user.profileImgUrl" alt="User Profile" class="rounded-circle" width="150" />
+                        <img [src]="user.profileImgUrl || 'assets/images/default-profile.png'" alt="User Profile"
+                            class="rounded-circle" width="150" />
                         <div class="mt-3">
                             <h4>{{ user.name }}</h4>
                             <p class="text-secondary mb-1">
@@ -75,8 +76,7 @@
                         </div>
                         <div class="col-sm-9">
                             <input type="text" id="favoriteGenres" name="favoriteGenres"
-                                [(ngModel)]="user.favoriteGenres" class="form-control"
-                                placeholder="Separate genres with commas" required />
+                                [(ngModel)]="user.favoriteGenres" class="form-control" required />
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-sm-9">
                             <input type="text" id="favgames" name="favgames" [(ngModel)]="user.favgames"
-                                class="form-control" placeholder="Separate games with commas" required />
+                                class="form-control" required />
                         </div>
                     </div>
 
