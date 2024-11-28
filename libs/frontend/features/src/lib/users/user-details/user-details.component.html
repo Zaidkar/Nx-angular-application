@@ -6,15 +6,8 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <div
-                            class="d-flex flex-column align-items-center text-center"
-                        >
-                            <img
-                                [src]="user.profileImgUrl"
-                                alt="User Profile"
-                                class="rounded-circle"
-                                width="150"
-                            />
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img [src]="user.profileImgUrl" alt="User Profile" class="rounded-circle" width="150" />
 
                             <div class="mt-3">
                                 <h4>{{ user.name }}</h4>
@@ -25,10 +18,7 @@
                                     {{ user.emailAddress }}
                                 </p>
 
-                                <button
-                                    class="btn btn-warning"
-                                    [routerLink]="['/users', user._id, 'edit']"
-                                >
+                                <button class="btn btn-warning" [routerLink]="['/users', user._id, 'edit']">
                                     Edit
                                 </button>
                             </div>
@@ -39,13 +29,11 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <strong>Status:</strong>
-                            <span
-                                [ngClass]="
+                            <span [ngClass]="
                                     user.isActive
                                         ? 'text-success'
                                         : 'text-danger'
-                                "
-                            >
+                                ">
                                 {{ user.isActive ? 'Active' : 'Inactive' }}
                             </span>
                         </li>
@@ -116,10 +104,10 @@
                         <hr />
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Top Three Games</h6>
+                                <h6 class="mb-0">Favorite Games</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                {{ user.topThreeGames.join(', ') }}
+                                {{ user.favgames.join(', ') }}
                             </div>
                         </div>
                         <hr />

@@ -61,7 +61,7 @@ export class User implements IUser {
         type: [String],
         default: []
     })
-    topThreeGames: string[] = [];
+    favgames: string[] = [];
 
     @Prop({
         required: false,

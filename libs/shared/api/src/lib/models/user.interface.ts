@@ -40,7 +40,7 @@ export interface IUserInfo extends IUserRegistration {
     gender: UserGender;
     isActive: boolean;
     favoriteGenres: string[];
-    topThreeGames: string[];
+    favgames: string[];
     preferredPlatform: string;
     country: string;
     city: string;

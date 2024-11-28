@@ -37,7 +37,7 @@ export class UpsertUserDto implements IUpsertUser {
 
     @IsArray()
     @IsNotEmpty()
-    topThreeGames: string[] = [];
+    favgames: string[] = [];
 
     @IsString()
     @IsNotEmpty()
