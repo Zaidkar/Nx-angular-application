@@ -7262,3 +7262,37 @@ An organization admin can start a free two week PRO plan trial with no billing r
 [NX Daemon Server] - 2024-11-28T12:07:00.827Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-11-28T12:07:00.828Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-28T12:07:00.828Z - Time taken for 'total execution time for createProjectGraph()' 69.93340000000899ms
+[NX Daemon Server] - 2024-11-28T14:39:28.674Z - Started listening on: \\.\pipe\nx\C:\Users\ZAIDK~1.DES\AppData\Local\Temp\9e5de92e9b\d.sock
+[NX Daemon Server] - 2024-11-28T14:39:28.692Z - [WATCHER]: Subscribed to changes within: Z:\dev\Angular\Nx-angular-application (native)
+[NX Daemon Server] - 2024-11-28T14:39:28.693Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-28T14:39:28.694Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-28T14:39:28.696Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-28T14:39:28.697Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-28T14:39:29.092Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-28T14:39:29.092Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-28T14:39:29.092Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-28T14:39:29.099Z - Time taken for 'loadNxPlugins' 393.9619ms
+[NX Daemon Server] - 2024-11-28T14:39:29.159Z - Time taken for 'build-project-configs' 24.640499999999975ms
+[NX Daemon Server] - 2024-11-28T14:39:31.392Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-28T14:39:31.393Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-28T14:39:31.394Z - Time taken for 'total for creating and serializing project graph' 2695.7695999999996ms
+[NX Daemon Server] - 2024-11-28T14:39:31.394Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-28T14:39:31.394Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2696. Response time: 1.
+[NX Daemon Server] - 2024-11-28T14:39:31.658Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-28T14:39:31.658Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-28T14:39:31.658Z - Handled HASH_TASKS. Handling time: 14. Response time: 0.
+[NX Daemon Server] - 2024-11-28T14:39:31.674Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-28T14:39:31.674Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-28T14:39:31.674Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2024-11-28T14:39:53.075Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-28T14:42:30.471Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-28T14:42:30.483Z - [WATCHER]: .github/workflows/main.yml was modified
+[NX Daemon Server] - 2024-11-28T14:42:30.592Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-28T14:42:30.593Z - [REQUEST]: .github/workflows/main.yml
+[NX Daemon Server] - 2024-11-28T14:42:30.593Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-28T14:42:30.596Z - Time taken for 'hash changed files from watcher' 4.679000000003725ms
+[NX Daemon Server] - 2024-11-28T14:42:30.665Z - Time taken for 'build-project-configs' 63.937100000010105ms
+[NX Daemon Server] - 2024-11-28T14:42:30.688Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-28T14:42:30.689Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-28T14:42:30.689Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-28T14:42:30.689Z - Time taken for 'total execution time for createProjectGraph()' 23.333500000007916ms
