@@ -1,54 +1,59 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { environment } from '@avans-nx-workshop/shared/util-env';
+import { HttpException, Injectable, Logger } from '@nestjs/common';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 import {
-    ApiResponse,
-    IUserInfo,
-    UserGender,
-    UserRole
-} from '@avans-nx-workshop/shared/api';
+    User as UserModel,
+    UserDocument
+} from '@avans-nx-workshop/backend/user';
+import { IUser, IUserInfo } from '@avans-nx-workshop/shared/api';
+// import { Meal, MealDocument } from '@avans-nx-workshop/backend/features';
+import { CreateUserDto, UpdateUserDto } from '@avans-nx-workshop/backend/dto';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class UserService {
-    constructor(private http: HttpClient) {}
+    private readonly logger: Logger = new Logger(UserService.name);
 
-    getUsers(): Observable<IUserInfo[]> {
-        return this.http
-            .get<ApiResponse<IUserInfo[]>>(`${environment.dataApiUrl}/user`)
-            .pipe(map((response) => (response.results || []).flat()));
+    constructor(
+        @InjectModel(UserModel.name) private userModel: Model<UserDocument> // @InjectModel(Meal.name) private meetupModel: Model<MealDocument>
+    ) {}
+
+    async findAll(): Promise<IUserInfo[]> {
+        this.logger.log(`Finding all items`);
+        const items = await this.userModel.find();
+        return items;
     }
 
-    getUserById(_id: string): Observable<IUserInfo> {
-        return this.http
-            .get<ApiResponse<IUserInfo>>(
-                `${environment.dataApiUrl}/user/${_id}`
-            )
-            .pipe(map((response) => response.results as IUserInfo));
+    async findOne(_id: string): Promise<IUser | null> {
+        this.logger.log(`finding user with id ${_id}`);
+        const item = await this.userModel.findOne({ _id }).exec();
+        if (!item) {
+            this.logger.debug('Item not found');
+        }
+        return item;
     }
 
-    createUser(user: IUserInfo): Observable<IUserInfo> {
-        return this.http.post<IUserInfo>(
-            `${environment.dataApiUrl}/user`,
-            user
-        );
+    async findOneByEmail(email: string): Promise<IUserInfo | null> {
+        this.logger.log(`Finding user by email ${email}`);
+        const item = this.userModel
+            .findOne({ emailAddress: email })
+            .select('-password')
+            .exec();
+        return item;
     }
 
-    updateUser(_id: string, user: Partial<IUserInfo>): Observable<IUserInfo> {
-        return this.http.put<IUserInfo>(
-            `${environment.dataApiUrl}/user/${_id}`,
-            user
-        );
+    async create(user: CreateUserDto): Promise<IUserInfo> {
+        this.logger.log(`Create user ${user.name}`);
+        const createdItem = this.userModel.create(user);
+        return createdItem;
     }
 
-    deleteUser(_id: string): Observable<void> {
-        return this.http.delete<void>(`${environment.dataApiUrl}/user/${_id}`);
+    async update(_id: string, user: UpdateUserDto): Promise<IUserInfo | null> {
+        this.logger.log(`Update user ${user.name}`);
+        return this.userModel.findByIdAndUpdate({ _id }, user);
     }
 
-    //export class userservice extends entityservice<IUserInfo> { readonly users?: IUserInfo[];
-    // constructor(http: HttpClient) { super(http, environment.dataurlapi '/user'); } }
-    //check entityservice.ts in share-a-meal/common/src/lib/entity/entity.service.ts
+    async delete(_id: string): Promise<IUserInfo | null> {
+        this.logger.log(`Deleted user with id ${_id}`);
+        return this.userModel.findByIdAndDelete({ _id });
+    }
 }
