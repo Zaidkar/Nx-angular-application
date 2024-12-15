@@ -5,3 +5,4 @@ export * from './lib/models/user.interface';
 export * from './lib/models/auth.interface';
 export * from './lib/models/game.interface';
 export * from './lib/models/gameEvent.interface';
+export * from './lib/models/review.interface';
