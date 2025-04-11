@@ -1,4 +1,4 @@
-<h1>Edit User</h1>
+<h1>{{ userId ? 'Edit User' : 'Create User' }}</h1>
 
 <form *ngIf="user" #userEditForm="ngForm" (ngSubmit)="userEditForm.form.valid && onSubmit(user)" novalidate>
     <div class="row gutters-sm">
@@ -44,15 +44,29 @@
                         </div>
                     </div>
 
+                    <div class="row mb-3" *ngIf="!userId">
+                        <div class="col-sm-3">
+                            <label for="password" class="form-label">Password</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" name="password" [(ngModel)]="user.password"
+                                class="form-control" required />
+                        </div>
+                    </div>
+
                     <div class="row mb-3">
                         <div class="col-sm-3">
                             <label for="role" class="form-label">Role</label>
                         </div>
                         <div class="col-sm-9">
-                            <select id="role" name="role" [(ngModel)]="user.role" class="form-control" required>
+                            <select id="role" name="role" [(ngModel)]="user.role" class="form-control"
+                                [disabled]="!userId" required>
                                 <option value="admin">Admin</option>
                                 <option value="user">User</option>
                                 <option value="moderator">Moderator</option>
+                                <option value="guest">Guest</option>
+                                <option value="unknown">Unknown</option>
+
                             </select>
                         </div>
                     </div>

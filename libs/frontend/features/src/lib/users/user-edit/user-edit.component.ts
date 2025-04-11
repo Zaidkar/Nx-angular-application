@@ -28,7 +28,9 @@ export class UserEditComponent implements OnInit {
                         return of({
                             name: '',
                             emailAddress: '',
-                            password: 'test'
+                            password: '',
+                            role: this.user?.role || 'user',
+                            active: true
                         });
                     } else {
                         this.userId = String(params.get('id'));

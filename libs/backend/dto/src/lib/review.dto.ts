@@ -23,6 +23,7 @@ export class UpdateReviewDto implements IUpdateReview {
 }
 
 export class UpsertReviewDto implements IUpsertReview {
+    @IsMongoId()
     _id!: Id;
     @IsString()
     @IsNotEmpty()

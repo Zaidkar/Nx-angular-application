@@ -87,9 +87,9 @@ export class User implements IUser {
     @Prop({
         required: false,
         type: String,
-        default: UserRole.Guest
+        default: UserRole.User
     })
-    role: UserRole = UserRole.Guest;
+    role: UserRole = UserRole.User;
 
     @Prop({
         required: false,

@@ -29,6 +29,7 @@
         "@nestjs/mongoose": "^10.0.2",
         "@nestjs/passport": "^10.0.2",
         "@nestjs/platform-express": "^10.0.2",
+        "@ng-bootstrap/ng-bootstrap": "^17.0.1",
         "@nx/angular": "20.1.2",
         "@popperjs/core": "^2.11.8",
         "@types/uuid": "^9.0.7",
