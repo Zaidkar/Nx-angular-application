@@ -20,7 +20,7 @@
                 "webpackConfig": "apps/data-api/webpack.config.js",
                 "generatePackageJson": true
             },
-            "configurations": {
+             "configurations": {
                 "development": {
                     "fileReplacements": [
                         {
