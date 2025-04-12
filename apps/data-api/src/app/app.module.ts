@@ -1,6 +1,11 @@
 import { Module } from '@nestjs/common';
 import { BackendFeaturesMealModule } from '@avans-nx-workshop/backend/features';
-import { GameModule, UsersModule } from '@avans-nx-workshop/backend/user';
+import {
+    GameEventModule,
+    GameModule,
+    ReviewModule,
+    UsersModule
+} from '@avans-nx-workshop/backend/user';
 import { AuthModule } from '@avans-nx-workshop/backend/auth';
 import { MongooseModule } from '@nestjs/mongoose';
 import { environment } from '@avans-nx-workshop/shared/util-env';
@@ -23,7 +28,9 @@ import { Logger } from '@nestjs/common';
             }
         }),
         UsersModule,
-        GameModule
+        GameModule,
+        ReviewModule,
+        GameEventModule
     ],
     controllers: [],
     providers: []

@@ -3,9 +3,10 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-        "build": "nx run-many -t build",
+        "build": "nx run-many -t build --configuration=production",
         "build:my-app": "nx run my-app:build:production",
-        "test": "nx run-many -t test"
+        "test": "nx run-many -t test",
+        "start": "nx run-many -t=serve -p data-api my-app"
     },
     "engines": {
         "node": "^20.0.0",
