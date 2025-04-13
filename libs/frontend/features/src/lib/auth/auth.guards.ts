@@ -1,60 +1,81 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import {
-  CanActivate,
-  CanActivateChild,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router,
+    CanActivate,
+    CanActivateChild,
+    ActivatedRouteSnapshot,
+    RouterStateSnapshot,
+    Router
 } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { User } from '../pages/user/user.model';
-import { ModalConfirmYesNoComponent } from '../shared/modal/modal.confirm-yes-no.component';
-import { ModalLeaveYesNoComponent } from '../shared/modal/modal.leave-yes-no.component';
+import { Observable, of, Subscription } from 'rxjs';
+import { map, take } from 'rxjs/operators';
 import { AuthService } from './auth.service';
+import { IUserIdentity, UserRole } from '@avans-nx-workshop/shared/api';
 
-/**
- * Verifies that user is logged in before navigating to routes.
- *
- */
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LoggedInAuthGuard implements CanActivate, CanActivateChild {
-  //
-  constructor(private authService: AuthService, private router: Router) {}
+    constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(): Observable<boolean> {
-    console.log('canActivate LoggedIn');
-    return this.authService.currentUser$.pipe(
-      map((user: User) => {
-        if (user && user.token) {
-          return true;
-        } else {
-          console.log('not logged in, reroute to /');
-          this.router.navigate(['/']);
-          return false;
-        }
-      })
-    );
-  }
+    canActivate(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): Observable<boolean> {
+        return this.authService.currentUser$.pipe(
+            take(1),
+            map((user: IUserIdentity | undefined) => {
+                const loggedIn = !!user?.token;
+                if (!loggedIn) {
+                    console.warn('Not logged in → redirecting to /login');
+                    this.router.navigate(['/login']);
+                }
+                return loggedIn;
+            })
+        );
+    }
 
-  canActivateChild(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
-    console.log('canActivateChild LoggedIn');
-    return this.canActivate();
-  }
+    canActivateChild(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): Observable<boolean> {
+        return this.canActivate(route, state);
+    }
 }
 
-@Injectable()
-export class SaveEditedWorkGuard {
-  constructor(private modalService: NgbModal) {}
+@Injectable({ providedIn: 'root' })
+export class LoggedInAsAdminAuthGuard implements CanActivate {
+    constructor(private authService: AuthService, private router: Router) {}
 
-  canDeactivate(): Promise<boolean> {
-    return this.modalService
-      .open(ModalLeaveYesNoComponent)
-      .result.then((result) => true)
-      .catch(() => false);
-  }
+    canActivate(): Observable<boolean> {
+        return this.authService.currentUser$.pipe(
+            take(1),
+            map((user: IUserIdentity | undefined) => {
+                const isAdmin = user?.token && user.role === UserRole.Admin;
+                if (!isAdmin) {
+                    console.warn('Not admin → redirecting to /');
+                    this.router.navigate(['/']);
+                }
+                return !!isAdmin;
+            })
+        );
+    }
+}
+
+@Injectable({ providedIn: 'root' })
+export class UserEditOwnDataAuthGuard implements CanActivate {
+    constructor(private authService: AuthService, private router: Router) {}
+
+    canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
+        const userIdFromRoute = route.paramMap.get('id');
+
+        return this.authService.currentUser$.pipe(
+            take(1),
+            map((user: IUserIdentity | undefined) => {
+                const isOwner = !!user && user._id === userIdFromRoute;
+                if (!isOwner) {
+                    console.warn('Tried to edit another user → redirecting');
+                    this.router.navigate(['/']);
+                }
+                return isOwner;
+            })
+        );
+    }
 }

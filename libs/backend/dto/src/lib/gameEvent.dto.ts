@@ -1,27 +1,52 @@
 import {
     IsNotEmpty,
     IsString,
-    IsBoolean,
     IsOptional,
-    isNotEmpty,
-    IsDate
+    IsDate,
+    IsArray,
+    IsMongoId
 } from 'class-validator';
 import {
     IUpdateGameEvent,
     IUpsertGameEvent,
     ICreateGameEvent,
     IGameIdentity,
-    IUserIdentity,
     Id
 } from '@avans-nx-workshop/shared/api';
-import {} from '@avans-nx-workshop/shared/api';
 
 export class UpdateGameEventDto implements IUpdateGameEvent {
-    _id?: string | undefined;
+    _id?: string;
 
     @IsString()
     @IsOptional()
-    name!: string;
+    title?: string;
+
+    @IsString()
+    @IsOptional()
+    description?: string;
+
+    @IsOptional()
+    maxPlayers?: number;
+
+    @IsString()
+    @IsOptional()
+    location?: string;
+
+    @IsOptional()
+    @IsDate()
+    startDate?: Date;
+
+    @IsOptional()
+    game?: IGameIdentity;
+
+    @IsArray()
+    @IsMongoId({ each: true })
+    @IsOptional()
+    participants?: Id[];
+
+    @IsString()
+    @IsOptional()
+    prize?: string;
 }
 
 export class UpsertGameEventDto implements IUpsertGameEvent {
@@ -37,10 +62,7 @@ export class UpsertGameEventDto implements IUpsertGameEvent {
     description!: string;
 
     @IsNotEmpty()
-    maxTeams!: number;
-
-    @IsNotEmpty()
-    maxPlayersPerTeam!: number;
+    maxPlayers!: number;
 
     @IsString()
     @IsNotEmpty()
@@ -53,7 +75,10 @@ export class UpsertGameEventDto implements IUpsertGameEvent {
     @IsNotEmpty()
     game!: IGameIdentity;
 
-    participants!: { [teamName: string]: IUserIdentity[] };
+    @IsArray()
+    @IsMongoId({ each: true })
+    @IsOptional()
+    participants!: Id[];
 
     @IsString()
     @IsOptional()
@@ -69,5 +94,6 @@ export class CreateGameEventDto implements ICreateGameEvent {
     @IsNotEmpty()
     description!: string;
 
+    @IsNotEmpty()
     game!: IGameIdentity;
 }

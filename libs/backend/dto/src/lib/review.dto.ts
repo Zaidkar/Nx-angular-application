@@ -1,60 +1,38 @@
 import {
     IsNotEmpty,
     IsString,
-    IsBoolean,
     IsOptional,
+    IsDate,
+    IsNumber,
+    ValidateNested,
     IsMongoId
 } from 'class-validator';
-import {
-    Id,
-    ICreateReview,
-    IUpsertReview,
-    IUpdateReview,
-    IUserIdentity
-} from '@avans-nx-workshop/shared/api';
-import {} from '@avans-nx-workshop/shared/api';
+import { Type } from 'class-transformer';
+import { IReview, IUser, IUserIdentity } from '@avans-nx-workshop/shared/api';
+import { User } from '@avans-nx-workshop/backend/user';
 
-export class UpdateReviewDto implements IUpdateReview {
-    _id?: string | undefined;
-
-    @IsString()
-    @IsOptional()
-    title!: string;
-}
-
-export class UpsertReviewDto implements IUpsertReview {
-    _id!: Id;
+export class CreateReviewDto {
     @IsString()
     @IsNotEmpty()
     title!: string;
 
+    @IsString()
+    @IsNotEmpty()
+    description!: string;
+
+    @IsDate()
+    @Type(() => Date)
+    postDate!: Date;
+
+    @IsNumber()
     @IsNotEmpty()
     hoursPlayed!: number;
 
-    @IsString()
-    @IsNotEmpty()
-    description!: string;
-
-    @IsNotEmpty()
-    reviewer!: IUserIdentity;
-
-    @IsNotEmpty()
-    postDate!: Date;
-
+    @IsNumber()
     @IsNotEmpty()
     score!: number;
+
+    reviewer!: IUserIdentity | IUser | string;
 }
 
-export class CreateReviewDto implements ICreateReview {
-    @IsString()
-    @IsNotEmpty()
-    title!: string;
-
-    @IsString()
-    @IsNotEmpty()
-    description!: string;
-
-    @IsString()
-    @IsOptional()
-    poster!: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Elden_Ring_Box_art.jpg/220px-Elden_Ring_Box_art.jpg';
-}
+export class UpdateReviewDto {}

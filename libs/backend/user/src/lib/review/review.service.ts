@@ -21,9 +21,9 @@ export class ReviewService {
         return this.reviewModel.findById(id).exec();
     }
 
-    async create(createReviewDto: CreateReviewDto): Promise<IReview> {
-        const createdReview = new this.reviewModel(createReviewDto);
-        return createdReview.save();
+    async create(review: CreateReviewDto): Promise<IReview> {
+        const createdReview = this.reviewModel.create(review);
+        return createdReview;
     }
 
     async update(

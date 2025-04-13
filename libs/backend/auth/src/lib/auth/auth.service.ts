@@ -53,7 +53,8 @@ export class AuthService {
                         name: user.name,
                         emailAddress: user.emailAddress,
                         profileImgUrl: user.profileImgUrl,
-                        token: this.jwtService.sign(payload)
+                        token: this.jwtService.sign(payload),
+                        role: user.role
                     };
                 } else {
                     const errMsg = 'Email not found or password invalid';

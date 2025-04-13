@@ -12,9 +12,10 @@ export interface IReview {
     title: string;
     hoursPlayed: number;
     description: string;
-    reviewer: IUserIdentity;
+    reviewer: string;
     postDate: Date;
     score: number;
+    poster?: string;
 }
 
 export type ICreateReview = Pick<IReview, 'title' | 'description'>;

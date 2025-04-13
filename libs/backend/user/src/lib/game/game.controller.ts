@@ -6,12 +6,24 @@ import {
     Delete,
     Param,
     Body,
-    UseGuards
+    UseGuards,
+    Req
 } from '@nestjs/common';
-import { IGame } from '@avans-nx-workshop/shared/api';
-import { CreateGameDto, UpdateGameDto } from '@avans-nx-workshop/backend/dto';
+import { Request as ExpressRequest } from 'express';
+import { IGame, IReview, IUserIdentity } from '@avans-nx-workshop/shared/api';
+import {
+    CreateGameDto,
+    UpdateGameDto,
+    CreateReviewDto
+} from '@avans-nx-workshop/backend/dto';
 import { GameService } from './game.service';
 import { GameExistGuard } from './game-exists.guard';
+import { Game } from './game.schema';
+import { Types } from 'mongoose';
+
+interface AuthenticatedRequest extends ExpressRequest {
+    user?: IUserIdentity;
+}
 
 @Controller('game')
 export class GameController {
@@ -44,5 +56,10 @@ export class GameController {
     @Delete(':id')
     delete(@Param('id') id: string): Promise<IGame | null> {
         return this.gameService.delete(id);
+    }
+
+    @Post(':id/reviews')
+    async addReview(@Param('id') id: string, @Body() review: CreateReviewDto) {
+        return this.gameService.addReview(id, review);
     }
 }

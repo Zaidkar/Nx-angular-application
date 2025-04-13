@@ -6,15 +6,22 @@ import {
     Delete,
     Param,
     Body,
-    UseGuards
+    UseGuards,
+    Request
 } from '@nestjs/common';
-import { IReview } from '@avans-nx-workshop/shared/api';
+import { IReview, IUserIdentity } from '@avans-nx-workshop/shared/api';
 import {
     CreateReviewDto,
     UpdateReviewDto
 } from '@avans-nx-workshop/backend/dto';
 import { ReviewService } from './review.service';
 import { ReviewExistGuard } from './review-exists.guard';
+import { ReviewOwnerGuard } from './review-owner.guard';
+import { Request as ExpressRequest } from 'express';
+
+interface AuthenticatedRequest extends ExpressRequest {
+    user?: IUserIdentity;
+}
 
 @Controller('review')
 export class ReviewController {
@@ -32,11 +39,21 @@ export class ReviewController {
 
     @Post('')
     @UseGuards(ReviewExistGuard)
-    create(@Body() createReviewDto: CreateReviewDto): Promise<IReview> {
-        return this.reviewService.create(createReviewDto);
+    create(
+        @Body() createReviewDto: CreateReviewDto,
+        @Request() req: AuthenticatedRequest
+    ): Promise<IReview> {
+        const user = req.user!;
+        console.log(user._id);
+        return this.reviewService.create({
+            ...createReviewDto,
+            reviewer: user._id,
+            postDate: new Date()
+        });
     }
 
     @Put(':id')
+    @UseGuards(ReviewOwnerGuard)
     update(
         @Param('id') id: string,
         @Body() updateReviewDto: UpdateReviewDto
@@ -45,6 +62,7 @@ export class ReviewController {
     }
 
     @Delete(':id')
+    @UseGuards(ReviewOwnerGuard)
     delete(@Param('id') id: string): Promise<IReview | null> {
         return this.reviewService.delete(id);
     }

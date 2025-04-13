@@ -40,12 +40,8 @@ export class Review implements IReview {
     })
     hoursPlayed!: number;
 
-    @Prop({
-        required: true,
-        type: MongooseSchema.Types.ObjectId,
-        ref: 'User'
-    })
-    reviewer!: IUserIdentity;
+    @Prop({ required: true, type: MongooseSchema.Types.ObjectId, ref: 'User' })
+    reviewer!: string;
 }
 
 export const ReviewSchema = SchemaFactory.createForClass(Review);

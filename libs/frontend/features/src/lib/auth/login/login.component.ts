@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     loginForm!: FormGroup;
     subs?: Subscription;
     submitted = false;
+    loginError: string | null = null;
 
     constructor(private authService: AuthService, private router: Router) {}
 
@@ -49,18 +50,26 @@ export class LoginComponent implements OnInit, OnDestroy {
     onSubmit(): void {
         if (this.loginForm.valid) {
             this.submitted = true;
-            const email = this.loginForm.value.email;
+            this.loginError = null;
+
+            const email = this.loginForm.value.email.toLowerCase();
             const password = this.loginForm.value.password;
-            this.authService
-                .login(email, password)
-                // .pipe(delay(1000))
-                .subscribe((user) => {
+
+            this.authService.login(email, password).subscribe({
+                next: (user) => {
                     if (user) {
                         console.log('Logged in');
                         this.router.navigate(['/']);
                     }
                     this.submitted = false;
-                });
+                },
+                error: (err) => {
+                    this.submitted = false;
+                    console.error('Login failed:', err);
+                    this.loginError =
+                        err?.message || 'Invalid email or password';
+                }
+            });
         } else {
             this.submitted = false;
             console.error('loginForm invalid');
@@ -69,24 +78,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     validEmail(control: FormControl): { [s: string]: boolean } | null {
         const email = control.value;
-        const regexp = new RegExp(
-            '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'
-        );
-        if (regexp.test(email) !== true) {
-            return { email: false };
-        } else {
-            return null;
-        }
+        const regexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+        return regexp.test(email) ? null : { email: false };
     }
 
     validPassword(control: FormControl): { [s: string]: boolean } | null {
         const password = control.value;
-        const regexp = new RegExp('^[a-zA-Z]([a-zA-Z0-9]){2,14}');
-        const test = regexp.test(password);
-        if (regexp.test(password) !== true) {
-            return { password: false };
-        } else {
-            return null;
-        }
+        const regexp = /^[a-zA-Z]([a-zA-Z0-9]){2,14}$/;
+        return regexp.test(password) ? null : { password: false };
     }
 }

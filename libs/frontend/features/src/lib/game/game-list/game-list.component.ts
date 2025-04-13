@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IGame, IUserInfo } from '@avans-nx-workshop/shared/api';
+import { IGame, IUserIdentity, UserRole } from '@avans-nx-workshop/shared/api';
 import { GameService } from '../game.service';
 import { Subscription } from 'rxjs';
 
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class GameListComponent implements OnInit, OnDestroy {
     games?: IGame[];
     sub?: Subscription;
+    currentUser?: IUserIdentity;
 
     constructor(private userService: GameService) {}
 
@@ -18,11 +19,23 @@ export class GameListComponent implements OnInit, OnDestroy {
         this.sub = this.userService
             .getGames()
             .subscribe((games) => (this.games = games));
+
+        const stored = localStorage.getItem('currentuser');
+        if (stored) {
+            this.currentUser = JSON.parse(stored);
+        }
     }
 
     ngOnDestroy(): void {
         if (this.sub) {
             this.sub.unsubscribe();
         }
+    }
+
+    isAdmin(): boolean {
+        return (
+            this.currentUser?.role?.toLowerCase() ===
+            UserRole.Admin.toLowerCase()
+        );
     }
 }

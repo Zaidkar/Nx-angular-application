@@ -3,7 +3,12 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '@avans-nx-workshop/shared/util-env';
-import { ApiResponse, IUpdateGame, IGame } from '@avans-nx-workshop/shared/api';
+import {
+    ApiResponse,
+    IUpdateGame,
+    IGame,
+    IReview
+} from '@avans-nx-workshop/shared/api';
 
 @Injectable({
     providedIn: 'root'
@@ -23,17 +28,17 @@ export class GameService {
             .pipe(map((response) => response.results as IGame));
     }
 
-    createGame(Game: IGame): Observable<IGame> {
+    createGame(game: IGame): Observable<IGame> {
         return this.http
-            .post<ApiResponse<any>>(environment.dataApiUrl + '/game', Game)
+            .post<ApiResponse<any>>(`${environment.dataApiUrl}/game`, game)
             .pipe(map((response) => response.results));
     }
 
-    updateGame(Game: IUpdateGame): Observable<IGame> {
+    updateGame(game: IUpdateGame): Observable<IGame> {
         return this.http
             .put<ApiResponse<any>>(
-                environment.dataApiUrl + '/game/' + Game._id,
-                Game
+                `${environment.dataApiUrl}/game/${game._id}`,
+                game
             )
             .pipe(
                 tap(console.log),
@@ -50,9 +55,22 @@ export class GameService {
                     return throwError(error);
                 })
             );
+    }
 
-        //export class Gameservice extends entityservice<IGameInfo> { readonly Games?: IGameInfo[];
-        // constructor(http: HttpClient) { super(http, environment.dataurlapi '/Game'); } }
-        //check entityservice.ts in share-a-meal/common/src/lib/entity/entity.service.ts
+    addReview(gameId: string, review: IReview): Observable<IGame> {
+        return this.http
+            .post<ApiResponse<IGame>>(
+                `${environment.dataApiUrl}/game/${gameId}/reviews`,
+                review
+            )
+            .pipe(
+                map((response) => {
+                    const result = response.results;
+                    if (!result || Array.isArray(result)) {
+                        throw new Error('Invalid API response for addReview.');
+                    }
+                    return result;
+                })
+            );
     }
 }

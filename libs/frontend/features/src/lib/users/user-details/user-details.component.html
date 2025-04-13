@@ -18,10 +18,13 @@
                                     {{ user.emailAddress }}
                                 </p>
 
-                                <button class="btn btn-warning" [routerLink]="['/users', user._id, 'edit']">
-                                    Edit
-                                </button>
-                                <button class="btn btn-danger " (click)="deleteUser(user._id)">Delete</button>
+                                <div *ngIf="canEditOrDelete()">
+                                    <button class="btn btn-warning" [routerLink]="['/users', user._id, 'edit']">
+                                        Edit
+                                    </button>
+                                    <button class="btn btn-danger" (click)="deleteUser(user._id)">Delete</button>
+                                </div>
+
                             </div>
                         </div>
                     </div>

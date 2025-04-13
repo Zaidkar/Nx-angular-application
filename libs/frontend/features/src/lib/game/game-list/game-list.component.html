@@ -10,7 +10,8 @@
     <p *ngIf="games && games.length === 0">No games found</p>
 
 
-    <button class="btn btn-primary" routerLink="create">Add Game</button>
+    <button class="btn btn-primary" routerLink="create" *ngIf="isAdmin()">Add Game</button>
+
 
 
     <table class="table table-striped table-hover" *ngIf="games && games.length > 0">

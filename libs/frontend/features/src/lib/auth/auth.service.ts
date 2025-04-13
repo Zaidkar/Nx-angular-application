@@ -76,8 +76,8 @@ export class AuthService {
                 }),
                 catchError((error: any) => {
                     console.log('error:', error);
-                    this.alertService.error(error);
-                    return of(undefined);
+
+                    throw error;
                 })
             );
     }
@@ -145,7 +145,6 @@ export class AuthService {
         this.router
             .navigate(['/'])
             .then((success) => {
-                // true when canDeactivate allows us to leave the page.
                 if (success) {
                     console.log('logout - removing local user info');
                     localStorage.removeItem(this.CURRENT_USER);
