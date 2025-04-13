@@ -4,6 +4,9 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AuthService } from './auth/auth.service';
 import { UserService } from './users/user.service';
 import { provideHttpClient } from '@angular/common/http';
 import { GameEditComponent } from './game/game-edit/game-edit.component';
@@ -20,12 +23,19 @@ import { GameDetailsComponent } from './game/game-details/game-details.component
         UserEditComponent,
         GameEditComponent,
         GameListComponent,
+        LoginComponent,
+        RegisterComponent,
         GameDetailsComponent
     ],
     exports: [
         UserDetailsComponent,
         UserListComponent,
         GameDetailsComponent,
+        UserEditComponent,
+        GameEditComponent,
+        LoginComponent,
+        RegisterComponent,
+
         GameListComponent
     ],
     providers: [UserService, provideHttpClient()]

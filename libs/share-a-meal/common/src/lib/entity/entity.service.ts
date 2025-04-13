@@ -2,8 +2,7 @@ import { IEntity } from './entity.model';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { AlertService } from '@avans-nx-workshop/share-a-meal/ui';
-import { AlertType } from '@avans-nx-workshop/share-a-meal/ui';
+import { AlertService } from './../../../../../shared/shared/alert/alert.service';
 import { Id } from '@avans-nx-workshop/shared/api';
 
 /**
@@ -112,15 +111,6 @@ export abstract class EntityService<T extends IEntity> {
      */
     handleError = (error: HttpErrorResponse): Observable<any> => {
         console.log(error);
-        this.alertService.showAlert({
-            type: AlertType.Error,
-            message: error.message,
-            visible: true,
-            error: {
-                message: error.message,
-                statusCode: error.status
-            }
-        });
         return of(false);
     };
 }

@@ -25,6 +25,7 @@ export enum UserGender {
 export interface IUserIdentity extends IEntity {
     name: string;
     emailAddress: string;
+    password: string;
     profileImgUrl: string;
     role: UserRole;
     token?: string;

@@ -54,7 +54,10 @@
             "@avans-nx-workshop/shared/util-env": [
                 "libs/shared/util-env/src/index.ts"
             ],
-            "@avans-nx-workshop/ui": ["libs/frontend/ui/src/index.ts"]
+            "@avans-nx-workshop/ui": ["libs/frontend/ui/src/index.ts"],
+            "@avans-nx-workshop/shared/alert": [
+                "libs/shared/alert/src/index.ts"
+            ]
         }
     },
     "exclude": ["node_modules", "tmp"]

@@ -10,3 +10,7 @@ export * from './lib/game/game-details/game-details.component';
 export * from './lib/game/game.service';
 
 export * from './lib/users/user-edit/user-edit.component';
+
+export * from './lib/auth/login/login.component';
+export * from './lib/auth/register/register.component';
+export * from './lib/auth/auth.service';
