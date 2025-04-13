@@ -28,8 +28,7 @@ export class GameEvent implements IGameEvent {
 
     @Prop({
         type: [MongooseSchema.Types.ObjectId],
-        ref: 'User',
-        default: []
+        ref: 'User'
     })
     participants!: Types.ObjectId[];
 

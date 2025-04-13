@@ -1,19 +1,21 @@
+// game.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
-import { IGame, IReview } from '@avans-nx-workshop/shared/api';
+import { IGame } from '@avans-nx-workshop/shared/api';
 import {
     CreateGameDto,
     CreateReviewDto,
     UpdateGameDto
 } from '@avans-nx-workshop/backend/dto';
 import { Game, GameDocument } from './game.schema';
-import { Observable } from 'rxjs';
+import { ReviewService } from '../review/review.service'; // adjust the path as necessary
 
 @Injectable()
 export class GameService {
     constructor(
-        @InjectModel(Game.name) private readonly gameModel: Model<GameDocument>
+        @InjectModel(Game.name) private readonly gameModel: Model<GameDocument>,
+        private readonly reviewService: ReviewService // Inject the ReviewService
     ) {}
 
     async findAll(): Promise<Game[]> {
@@ -21,11 +23,15 @@ export class GameService {
     }
 
     async findOne(id: string): Promise<Game | null> {
-        return this.gameModel
-            .findById(id)
-            .populate('reviews.reviewer', 'name emailAddress profileImgUrl')
-            .exec();
+        return (
+            this.gameModel
+                .findById(id)
+                // When reviews are fully embedded, populate might not be necessary unless you want to resolve nested refs.
+                .populate('reviews.reviewer', 'name emailAddress profileImgUrl')
+                .exec()
+        );
     }
+
     async create(createGameDto: CreateGameDto): Promise<Game> {
         const createdGame = new this.gameModel(createGameDto);
         return createdGame.save();
@@ -44,16 +50,16 @@ export class GameService {
         return this.gameModel.findByIdAndDelete(id).exec();
     }
 
-    async addReview(gameId: string, review: CreateReviewDto): Promise<Game> {
-        const generatedReview = {
-            ...review,
-            _id: new Types.ObjectId()
-        };
+    async addReview(gameId: string, reviewDto: CreateReviewDto): Promise<Game> {
+        const createdReview = await this.reviewService.create({
+            ...reviewDto,
+            postDate: new Date()
+        });
 
         const updatedGame = await this.gameModel
             .findByIdAndUpdate(
                 gameId,
-                { $push: { reviews: generatedReview } },
+                { $push: { reviews: createdReview['toObject']() } },
                 { new: true, runValidators: true }
             )
             .exec();

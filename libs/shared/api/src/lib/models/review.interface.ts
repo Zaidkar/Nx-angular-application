@@ -8,14 +8,15 @@ export interface IReviewIdentity extends IEntity {
 }
 
 export interface IReview {
-    _id: Id;
+    [x: string]: any;
+    _id?: Id;
     title: string;
     hoursPlayed: number;
     description: string;
-    reviewer: string;
+    reviewer: string | IUserIdentity;
     postDate: Date;
     score: number;
-    poster?: string;
+    poster?: string | IUserIdentity;
 }
 
 export type ICreateReview = Pick<IReview, 'title' | 'description'>;

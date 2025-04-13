@@ -15,11 +15,17 @@ export class GameEventService {
     ) {}
 
     async findAll(): Promise<IGameEvent[]> {
-        return this.gameEventModel.find().exec();
+        return this.gameEventModel
+            .find()
+            .populate('participants', 'name emailAddress')
+            .exec();
     }
 
     async findOne(id: string): Promise<IGameEvent | null> {
-        return this.gameEventModel.findById(id).exec();
+        return this.gameEventModel
+            .findById(id)
+            .populate('participants', 'name emailAddress')
+            .exec();
     }
 
     async create(createGameEventDto: CreateGameEventDto): Promise<IGameEvent> {

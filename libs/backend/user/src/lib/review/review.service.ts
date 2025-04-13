@@ -21,11 +21,6 @@ export class ReviewService {
         return this.reviewModel.findById(id).exec();
     }
 
-    async create(review: CreateReviewDto): Promise<IReview> {
-        const createdReview = this.reviewModel.create(review);
-        return createdReview;
-    }
-
     async update(
         id: string,
         updateReviewDto: UpdateReviewDto
@@ -37,5 +32,13 @@ export class ReviewService {
 
     async delete(id: string): Promise<IReview | null> {
         return this.reviewModel.findByIdAndDelete(id).exec();
+    }
+
+    async create(reviewDto: CreateReviewDto): Promise<IReview> {
+        const { ...data } = reviewDto; // This ensures _id is stripped if accidentally provided.
+        return this.reviewModel.create({
+            ...data,
+            postDate: reviewDto.postDate || new Date()
+        });
     }
 }
