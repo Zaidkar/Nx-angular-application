@@ -9874,3 +9874,764 @@ An organization admin can start a free two week PRO plan trial with no billing r
 [NX Daemon Server] - 2025-04-16T11:29:14.529Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2025-04-16T11:29:27.825Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2025-04-16T11:29:27.966Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:29:40.808Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:29:40.816Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:29:40.930Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:29:40.930Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:29:40.930Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:29:40.939Z - Time taken for 'hash changed files from watcher' 1.064699999988079ms
+[NX Daemon Server] - 2025-04-16T13:29:40.980Z - Time taken for 'build-project-configs' 40.128100000321865ms
+[NX Daemon Server] - 2025-04-16T13:29:41.394Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:29:41.394Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:29:41.395Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:29:41.395Z - Time taken for 'total execution time for createProjectGraph()' 409.3477999996394ms
+[NX Daemon Server] - 2025-04-16T13:29:41.643Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:25.113Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:25.114Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:31:25.330Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:31:25.330Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:31:25.330Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:31:25.335Z - Time taken for 'hash changed files from watcher' 0.4531999994069338ms
+[NX Daemon Server] - 2025-04-16T13:31:25.354Z - Time taken for 'build-project-configs' 17.11409999988973ms
+[NX Daemon Server] - 2025-04-16T13:31:25.395Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:31:25.396Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:31:25.396Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:31:25.396Z - Time taken for 'total execution time for createProjectGraph()' 37.69219999946654ms
+[NX Daemon Server] - 2025-04-16T13:31:25.579Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:27.882Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:27.883Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:31:27.975Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:28.285Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:31:28.285Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:31:28.285Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:31:28.288Z - Time taken for 'hash changed files from watcher' 0.45250000059604645ms
+[NX Daemon Server] - 2025-04-16T13:31:28.302Z - Time taken for 'build-project-configs' 11.142300000414252ms
+[NX Daemon Server] - 2025-04-16T13:31:28.333Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:31:28.334Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:31:28.334Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:31:28.334Z - Time taken for 'total execution time for createProjectGraph()' 28.62580000050366ms
+[NX Daemon Server] - 2025-04-16T13:31:29.100Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:29.101Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:31:29.178Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:31:29.911Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:31:29.911Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:31:29.911Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:31:29.914Z - Time taken for 'hash changed files from watcher' 0.4775000000372529ms
+[NX Daemon Server] - 2025-04-16T13:31:29.927Z - Time taken for 'build-project-configs' 10.44400000013411ms
+[NX Daemon Server] - 2025-04-16T13:31:29.945Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:31:29.946Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:31:29.946Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:31:29.946Z - Time taken for 'total execution time for createProjectGraph()' 14.676300000399351ms
+[NX Daemon Server] - 2025-04-16T13:32:04.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:32:04.171Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:32:04.296Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:32:05.777Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:32:05.777Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:32:05.777Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:32:05.780Z - Time taken for 'hash changed files from watcher' 0.6247999994084239ms
+[NX Daemon Server] - 2025-04-16T13:32:05.793Z - Time taken for 'build-project-configs' 11.30629999935627ms
+[NX Daemon Server] - 2025-04-16T13:32:05.823Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:32:05.824Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:32:05.824Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:32:05.824Z - Time taken for 'total execution time for createProjectGraph()' 26.527200000360608ms
+[NX Daemon Server] - 2025-04-16T13:33:29.250Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:29.251Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:33:29.358Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:32.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:32.190Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:33:32.282Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:32.454Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:33:32.454Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:33:32.454Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:33:32.457Z - Time taken for 'hash changed files from watcher' 0.3605000004172325ms
+[NX Daemon Server] - 2025-04-16T13:33:32.469Z - Time taken for 'build-project-configs' 11.181200000457466ms
+[NX Daemon Server] - 2025-04-16T13:33:32.499Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:33:32.499Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:33:32.500Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:33:32.500Z - Time taken for 'total execution time for createProjectGraph()' 25.656299999915063ms
+[NX Daemon Server] - 2025-04-16T13:33:43.702Z - [WATCHER]: libs/backend/user/src/lib/review/review.schema.ts was modified
+[NX Daemon Server] - 2025-04-16T13:33:43.702Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:43.763Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:33:50.112Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:33:50.112Z - [REQUEST]: libs/backend/user/src/lib/review/review.schema.ts
+[NX Daemon Server] - 2025-04-16T13:33:50.112Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:33:50.115Z - Time taken for 'hash changed files from watcher' 0.35020000021904707ms
+[NX Daemon Server] - 2025-04-16T13:33:50.130Z - Time taken for 'build-project-configs' 11.932099999859929ms
+[NX Daemon Server] - 2025-04-16T13:33:50.150Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:33:50.150Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:33:50.150Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:33:50.150Z - Time taken for 'total execution time for createProjectGraph()' 17.0910000000149ms
+[NX Daemon Server] - 2025-04-16T13:34:15.062Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:34:15.063Z - [WATCHER]: libs/frontend/features/src/lib/game/game-details/game-details.component.ts was modified
+[NX Daemon Server] - 2025-04-16T13:34:16.030Z - [WATCHER]: libs/frontend/features/src/lib/game/game-details/game-details.component.ts was modified
+[NX Daemon Server] - 2025-04-16T13:34:16.030Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:34:17.334Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:34:21.472Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:34:21.472Z - [REQUEST]: libs/frontend/features/src/lib/game/game-details/game-details.component.ts
+[NX Daemon Server] - 2025-04-16T13:34:21.472Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:34:21.475Z - Time taken for 'hash changed files from watcher' 0.43620000034570694ms
+[NX Daemon Server] - 2025-04-16T13:34:21.489Z - Time taken for 'build-project-configs' 11.823900000192225ms
+[NX Daemon Server] - 2025-04-16T13:34:21.508Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:34:21.508Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:34:21.509Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:34:21.509Z - Time taken for 'total execution time for createProjectGraph()' 16.1269000004977ms
+[NX Daemon Server] - 2025-04-16T13:34:42.019Z - [WATCHER]: libs/frontend/features/src/lib/game/game-details/game-details.component.ts was modified
+[NX Daemon Server] - 2025-04-16T13:34:42.020Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:34:43.402Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:34:48.426Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:34:48.426Z - [REQUEST]: libs/frontend/features/src/lib/game/game-details/game-details.component.ts
+[NX Daemon Server] - 2025-04-16T13:34:48.426Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:34:48.429Z - Time taken for 'hash changed files from watcher' 0.39929999969899654ms
+[NX Daemon Server] - 2025-04-16T13:34:48.442Z - Time taken for 'build-project-configs' 11.42409999947995ms
+[NX Daemon Server] - 2025-04-16T13:34:48.461Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:34:48.461Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:34:48.462Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:34:48.462Z - Time taken for 'total execution time for createProjectGraph()' 15.387600000016391ms
+[NX Daemon Server] - 2025-04-16T13:36:38.872Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:36:38.873Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:36:38.996Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:36:45.288Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:36:45.288Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:36:45.288Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:36:45.291Z - Time taken for 'hash changed files from watcher' 0.35400000028312206ms
+[NX Daemon Server] - 2025-04-16T13:36:45.308Z - Time taken for 'build-project-configs' 14.498799999244511ms
+[NX Daemon Server] - 2025-04-16T13:36:45.345Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:36:45.346Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:36:45.346Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:36:45.346Z - Time taken for 'total execution time for createProjectGraph()' 33.46750000026077ms
+[NX Daemon Server] - 2025-04-16T13:37:08.241Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:37:08.242Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:37:08.349Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:37:14.648Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:37:14.648Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:37:14.648Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:37:14.651Z - Time taken for 'hash changed files from watcher' 0.4687999999150634ms
+[NX Daemon Server] - 2025-04-16T13:37:14.664Z - Time taken for 'build-project-configs' 11.346499999985099ms
+[NX Daemon Server] - 2025-04-16T13:37:14.694Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:37:14.695Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:37:14.695Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:37:14.695Z - Time taken for 'total execution time for createProjectGraph()' 26.22840000037104ms
+[NX Daemon Server] - 2025-04-16T13:39:10.576Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:10.577Z - [WATCHER]: libs/backend/user/src/lib/game/game.schema.ts was modified
+[NX Daemon Server] - 2025-04-16T13:39:10.638Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:16.551Z - [WATCHER]: libs/backend/user/src/lib/review/review.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:39:16.552Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:16.627Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:16.986Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:39:16.986Z - [REQUEST]: libs/backend/user/src/lib/game/game.schema.ts,libs/backend/user/src/lib/review/review.service.ts
+[NX Daemon Server] - 2025-04-16T13:39:16.986Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:39:16.988Z - Time taken for 'hash changed files from watcher' 0.7675999999046326ms
+[NX Daemon Server] - 2025-04-16T13:39:17.002Z - Time taken for 'build-project-configs' 11.176400000229478ms
+[NX Daemon Server] - 2025-04-16T13:39:17.022Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:39:17.023Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:39:17.023Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:39:17.023Z - Time taken for 'total execution time for createProjectGraph()' 16.53679999988526ms
+[NX Daemon Server] - 2025-04-16T13:39:23.703Z - [WATCHER]: libs/backend/user/src/lib/review/review.schema.ts was modified
+[NX Daemon Server] - 2025-04-16T13:39:23.703Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:23.767Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:39:30.115Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:39:30.115Z - [REQUEST]: libs/backend/user/src/lib/review/review.schema.ts
+[NX Daemon Server] - 2025-04-16T13:39:30.115Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:39:30.118Z - Time taken for 'hash changed files from watcher' 0.33630000054836273ms
+[NX Daemon Server] - 2025-04-16T13:39:30.132Z - Time taken for 'build-project-configs' 11.926599999889731ms
+[NX Daemon Server] - 2025-04-16T13:39:30.151Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:39:30.151Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:39:30.152Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:39:30.152Z - Time taken for 'total execution time for createProjectGraph()' 15.809200000017881ms
+[NX Daemon Server] - 2025-04-16T13:40:06.698Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:40:06.699Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:40:06.807Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:40:13.104Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:40:13.104Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:40:13.104Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:40:13.107Z - Time taken for 'hash changed files from watcher' 0.3519999999552965ms
+[NX Daemon Server] - 2025-04-16T13:40:13.121Z - Time taken for 'build-project-configs' 11.940499999560416ms
+[NX Daemon Server] - 2025-04-16T13:40:13.151Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:40:13.152Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:40:13.152Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:40:13.152Z - Time taken for 'total execution time for createProjectGraph()' 26.958000000566244ms
+[NX Daemon Server] - 2025-04-16T13:40:27.125Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:40:27.125Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:40:27.545Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:40:33.530Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:40:33.530Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:40:33.530Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:40:33.533Z - Time taken for 'hash changed files from watcher' 0.3415999999269843ms
+[NX Daemon Server] - 2025-04-16T13:40:33.547Z - Time taken for 'build-project-configs' 11.838600000366569ms
+[NX Daemon Server] - 2025-04-16T13:40:33.576Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:40:33.576Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:40:33.576Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:40:33.576Z - Time taken for 'total execution time for createProjectGraph()' 25.36849999986589ms
+[NX Daemon Server] - 2025-04-16T13:41:04.950Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:41:04.950Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:41:05.041Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:41:11.356Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:41:11.356Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:41:11.356Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:41:11.358Z - Time taken for 'hash changed files from watcher' 0.3885000003501773ms
+[NX Daemon Server] - 2025-04-16T13:41:11.371Z - Time taken for 'build-project-configs' 10.952800000086427ms
+[NX Daemon Server] - 2025-04-16T13:41:11.399Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:41:11.400Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:41:11.400Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:41:11.400Z - Time taken for 'total execution time for createProjectGraph()' 24.694500000216067ms
+[NX Daemon Server] - 2025-04-16T13:52:01.745Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:52:01.746Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:52:01.856Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:52:08.152Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:52:08.152Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:52:08.152Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:52:08.155Z - Time taken for 'hash changed files from watcher' 0.35590000078082085ms
+[NX Daemon Server] - 2025-04-16T13:52:08.168Z - Time taken for 'build-project-configs' 11.432800000533462ms
+[NX Daemon Server] - 2025-04-16T13:52:08.195Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:52:08.195Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:52:08.196Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:52:08.196Z - Time taken for 'total execution time for createProjectGraph()' 23.857999999076128ms
+[NX Daemon Server] - 2025-04-16T13:52:57.206Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:52:57.207Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:52:57.298Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:53:03.613Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:53:03.613Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:53:03.613Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:53:03.616Z - Time taken for 'hash changed files from watcher' 0.3333999998867512ms
+[NX Daemon Server] - 2025-04-16T13:53:03.630Z - Time taken for 'build-project-configs' 12.037299999967217ms
+[NX Daemon Server] - 2025-04-16T13:53:03.658Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:53:03.659Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:53:03.659Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:53:03.659Z - Time taken for 'total execution time for createProjectGraph()' 25.232899999246ms
+[NX Daemon Server] - 2025-04-16T13:53:06.216Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:53:06.217Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:53:06.325Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:53:12.628Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:53:12.628Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:53:12.628Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:53:12.631Z - Time taken for 'hash changed files from watcher' 0.3467999994754791ms
+[NX Daemon Server] - 2025-04-16T13:53:12.644Z - Time taken for 'build-project-configs' 11.137299999594688ms
+[NX Daemon Server] - 2025-04-16T13:53:12.673Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:53:12.674Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:53:12.674Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:53:12.674Z - Time taken for 'total execution time for createProjectGraph()' 25.11089999973774ms
+[NX Daemon Server] - 2025-04-16T13:55:55.222Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:55:55.222Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:55:55.331Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:01.632Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:56:01.632Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:56:01.632Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:56:01.634Z - Time taken for 'hash changed files from watcher' 0.3401000015437603ms
+[NX Daemon Server] - 2025-04-16T13:56:01.649Z - Time taken for 'build-project-configs' 11.451500000432134ms
+[NX Daemon Server] - 2025-04-16T13:56:01.675Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:56:01.675Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:56:01.675Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:56:01.675Z - Time taken for 'total execution time for createProjectGraph()' 23.522600000724196ms
+[NX Daemon Server] - 2025-04-16T13:56:10.472Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:10.473Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T13:56:10.580Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:16.886Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:56:16.886Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T13:56:16.886Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:56:16.889Z - Time taken for 'hash changed files from watcher' 0.3148999996483326ms
+[NX Daemon Server] - 2025-04-16T13:56:16.903Z - Time taken for 'build-project-configs' 12.03099999949336ms
+[NX Daemon Server] - 2025-04-16T13:56:16.931Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:56:16.932Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:56:16.932Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:56:16.932Z - Time taken for 'total execution time for createProjectGraph()' 23.86229999922216ms
+[NX Daemon Server] - 2025-04-16T13:56:21.992Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:56:22.007Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T13:56:32.206Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:56:32.206Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T13:56:32.207Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:56:32.208Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T13:56:32.209Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T13:56:32.210Z - Time taken for 'total for creating and serializing project graph' 0.42720000073313713ms
+[NX Daemon Server] - 2025-04-16T13:56:32.210Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T13:56:32.210Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2025-04-16T13:56:32.257Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:56:32.257Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:56:32.257Z - Handled HASH_TASKS. Handling time: 12. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:32.265Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:56:32.265Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:56:32.265Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:32.955Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:56:32.955Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:56:32.956Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:56:32.957Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T13:56:32.958Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T13:56:32.958Z - Time taken for 'total for creating and serializing project graph' 0.40040000155568123ms
+[NX Daemon Server] - 2025-04-16T13:56:32.959Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T13:56:32.959Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2025-04-16T13:56:37.836Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:39.593Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-04-16T13:56:39.593Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:56:39.593Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-04-16T13:56:39.595Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T13:56:39.596Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T13:56:39.597Z - Time taken for 'total for creating and serializing project graph' 0.38640000112354755ms
+[NX Daemon Server] - 2025-04-16T13:56:39.597Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T13:56:39.597Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2025-04-16T13:56:39.640Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:56:39.640Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:56:39.640Z - Handled HASH_TASKS. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:39.651Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:56:39.651Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:56:39.651Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:40.725Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:44.628Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:56:57.483Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-04-16T13:56:57.483Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-04-16T13:56:57.483Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:57.487Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2025-04-16T13:56:57.487Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2025-04-16T13:56:57.487Z - Handled RECORD_TASK_RUNS. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:57.489Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2025-04-16T13:56:57.489Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2025-04-16T13:56:57.489Z - Handled GET_FLAKY_TASKS. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:56:57.494Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:56:58.050Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:56:58.057Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T13:57:00.309Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:57:00.309Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T13:57:00.309Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:57:00.311Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T13:57:00.311Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T13:57:00.312Z - Time taken for 'total for creating and serializing project graph' 0.385300001129508ms
+[NX Daemon Server] - 2025-04-16T13:57:00.312Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T13:57:00.312Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-04-16T13:57:00.359Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:57:00.359Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-04-16T13:57:00.359Z - Handled HASH_TASKS. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:57:00.374Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:57:00.374Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T13:57:00.374Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-04-16T13:57:01.048Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:57:01.048Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T13:57:01.048Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T13:57:01.050Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T13:57:01.050Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T13:57:01.051Z - Time taken for 'total for creating and serializing project graph' 0.4320000000298023ms
+[NX Daemon Server] - 2025-04-16T13:57:01.051Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T13:57:01.051Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-04-16T13:57:01.508Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:57:05.578Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:59:20.153Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T13:59:20.153Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:59:20.261Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:59:20.261Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T13:59:20.261Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:59:20.264Z - Time taken for 'hash changed files from watcher' 0.3340000007301569ms
+[NX Daemon Server] - 2025-04-16T13:59:20.283Z - Time taken for 'build-project-configs' 16.86680000089109ms
+[NX Daemon Server] - 2025-04-16T13:59:20.314Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:59:20.315Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:59:20.315Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:59:20.315Z - Time taken for 'total execution time for createProjectGraph()' 26.925400000065565ms
+[NX Daemon Server] - 2025-04-16T13:59:20.666Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:59:25.565Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:59:25.566Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T13:59:25.642Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T13:59:25.767Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T13:59:25.767Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T13:59:25.767Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T13:59:25.770Z - Time taken for 'hash changed files from watcher' 0.34129999950528145ms
+[NX Daemon Server] - 2025-04-16T13:59:25.786Z - Time taken for 'build-project-configs' 13.364099999889731ms
+[NX Daemon Server] - 2025-04-16T13:59:25.803Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T13:59:25.804Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T13:59:25.804Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T13:59:25.804Z - Time taken for 'total execution time for createProjectGraph()' 14.862199999392033ms
+[NX Daemon Server] - 2025-04-16T14:00:03.011Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T14:00:03.021Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T14:00:07.010Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T14:00:07.011Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-04-16T14:00:07.011Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T14:00:07.013Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T14:00:07.013Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T14:00:07.014Z - Time taken for 'total for creating and serializing project graph' 0.43020000122487545ms
+[NX Daemon Server] - 2025-04-16T14:00:07.014Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T14:00:07.014Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-04-16T14:00:07.056Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-04-16T14:00:07.056Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-04-16T14:00:07.056Z - Handled HASH_TASKS. Handling time: 10. Response time: 0.
+[NX Daemon Server] - 2025-04-16T14:00:07.068Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T14:00:07.068Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T14:00:07.068Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-04-16T14:00:07.704Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T14:00:07.704Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-04-16T14:00:07.704Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T14:00:07.706Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T14:00:07.706Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T14:00:07.707Z - Time taken for 'total for creating and serializing project graph' 0.38580000028014183ms
+[NX Daemon Server] - 2025-04-16T14:00:07.707Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T14:00:07.707Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-04-16T14:00:14.776Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-04-16T14:00:14.776Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-04-16T14:00:14.776Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-04-16T14:00:14.778Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-04-16T14:00:14.779Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-04-16T14:00:14.780Z - Time taken for 'total for creating and serializing project graph' 0.41860000044107437ms
+[NX Daemon Server] - 2025-04-16T14:00:14.780Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-04-16T14:00:14.780Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2025-04-16T14:00:14.823Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-04-16T14:00:14.823Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-04-16T14:00:14.823Z - Handled HASH_TASKS. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2025-04-16T14:00:14.835Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T14:00:14.835Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-04-16T14:00:14.835Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-04-16T14:00:15.926Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:00:19.774Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:01:16.954Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:01:16.954Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:01:17.063Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:01:17.063Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:01:17.063Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:01:17.066Z - Time taken for 'hash changed files from watcher' 0.34179999865591526ms
+[NX Daemon Server] - 2025-04-16T14:01:17.081Z - Time taken for 'build-project-configs' 12.505499999970198ms
+[NX Daemon Server] - 2025-04-16T14:01:17.111Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:01:17.112Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:01:17.112Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:01:17.112Z - Time taken for 'total execution time for createProjectGraph()' 25.368300000205636ms
+[NX Daemon Server] - 2025-04-16T14:01:17.517Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:01:45.664Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:01:45.664Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:01:45.789Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:01:45.866Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:01:45.866Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:01:45.867Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:01:45.870Z - Time taken for 'hash changed files from watcher' 0.33410000056028366ms
+[NX Daemon Server] - 2025-04-16T14:01:45.885Z - Time taken for 'build-project-configs' 13.409800000488758ms
+[NX Daemon Server] - 2025-04-16T14:01:45.912Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:01:45.912Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:01:45.912Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:01:45.912Z - Time taken for 'total execution time for createProjectGraph()' 23.965800000354648ms
+[NX Daemon Server] - 2025-04-16T14:04:04.235Z - [WATCHER]: libs/backend/user/src/lib/review/review.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:04:04.235Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:04.311Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:04.637Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:04:04.637Z - [REQUEST]: libs/backend/user/src/lib/review/review.controller.ts
+[NX Daemon Server] - 2025-04-16T14:04:04.637Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:04:04.640Z - Time taken for 'hash changed files from watcher' 0.4515999983996153ms
+[NX Daemon Server] - 2025-04-16T14:04:04.653Z - Time taken for 'build-project-configs' 11.45519999973476ms
+[NX Daemon Server] - 2025-04-16T14:04:04.679Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:04:04.680Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:04:04.680Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:04:04.680Z - Time taken for 'total execution time for createProjectGraph()' 23.188500000163913ms
+[NX Daemon Server] - 2025-04-16T14:04:05.025Z - [WATCHER]: libs/backend/user/src/lib/review/review.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:04:05.025Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:05.085Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:05.831Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:04:05.831Z - [REQUEST]: libs/backend/user/src/lib/review/review.controller.ts
+[NX Daemon Server] - 2025-04-16T14:04:05.831Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:04:05.833Z - Time taken for 'hash changed files from watcher' 0.336600000038743ms
+[NX Daemon Server] - 2025-04-16T14:04:05.849Z - Time taken for 'build-project-configs' 12.034800000488758ms
+[NX Daemon Server] - 2025-04-16T14:04:05.866Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:04:05.867Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:04:05.867Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:04:05.867Z - Time taken for 'total execution time for createProjectGraph()' 15.021099999547005ms
+[NX Daemon Server] - 2025-04-16T14:04:20.478Z - [WATCHER]: libs/backend/user/src/lib/review/review.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:04:20.479Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:20.555Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:04:22.081Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:04:22.081Z - [REQUEST]: libs/backend/user/src/lib/review/review.service.ts
+[NX Daemon Server] - 2025-04-16T14:04:22.081Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:04:22.084Z - Time taken for 'hash changed files from watcher' 0.3325999993830919ms
+[NX Daemon Server] - 2025-04-16T14:04:22.096Z - Time taken for 'build-project-configs' 10.69340000115335ms
+[NX Daemon Server] - 2025-04-16T14:04:22.125Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:04:22.126Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:04:22.126Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:04:22.126Z - Time taken for 'total execution time for createProjectGraph()' 25.41110000014305ms
+[NX Daemon Server] - 2025-04-16T14:06:07.009Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:07.010Z - [WATCHER]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:06:07.102Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:10.224Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:06:10.224Z - [REQUEST]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts
+[NX Daemon Server] - 2025-04-16T14:06:10.224Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:06:10.226Z - Time taken for 'hash changed files from watcher' 0.384400000795722ms
+[NX Daemon Server] - 2025-04-16T14:06:10.241Z - Time taken for 'build-project-configs' 11.865100000053644ms
+[NX Daemon Server] - 2025-04-16T14:06:10.269Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:06:10.269Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:06:10.269Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:06:10.269Z - Time taken for 'total execution time for createProjectGraph()' 24.294999999925494ms
+[NX Daemon Server] - 2025-04-16T14:06:17.275Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:17.276Z - [WATCHER]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:06:17.352Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:17.878Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:17.879Z - [WATCHER]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:06:17.972Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:06:23.684Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:06:23.684Z - [REQUEST]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts
+[NX Daemon Server] - 2025-04-16T14:06:23.684Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:06:23.686Z - Time taken for 'hash changed files from watcher' 0.3247999995946884ms
+[NX Daemon Server] - 2025-04-16T14:06:23.700Z - Time taken for 'build-project-configs' 11.215699998661876ms
+[NX Daemon Server] - 2025-04-16T14:06:23.718Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:06:23.718Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:06:23.718Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:06:23.718Z - Time taken for 'total execution time for createProjectGraph()' 14.454299999400973ms
+[NX Daemon Server] - 2025-04-16T14:07:44.566Z - [WATCHER]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:07:44.566Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:07:44.674Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:07:50.968Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:07:50.968Z - [REQUEST]: libs/backend/user/src/lib/gameEvent/gameEvent.controller.ts
+[NX Daemon Server] - 2025-04-16T14:07:50.968Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:07:50.971Z - Time taken for 'hash changed files from watcher' 0.3364000003784895ms
+[NX Daemon Server] - 2025-04-16T14:07:50.986Z - Time taken for 'build-project-configs' 12.586200000718236ms
+[NX Daemon Server] - 2025-04-16T14:07:51.013Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:07:51.013Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:07:51.014Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:07:51.014Z - Time taken for 'total execution time for createProjectGraph()' 24.203000001609325ms
+[NX Daemon Server] - 2025-04-16T14:07:58.278Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:07:58.279Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:07:58.371Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:07:59.212Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:07:59.213Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:07:59.291Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:08:04.693Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:08:04.693Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:08:04.693Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:08:04.695Z - Time taken for 'hash changed files from watcher' 0.4209000002592802ms
+[NX Daemon Server] - 2025-04-16T14:08:04.709Z - Time taken for 'build-project-configs' 11.098600000143051ms
+[NX Daemon Server] - 2025-04-16T14:08:04.735Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:08:04.736Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:08:04.736Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:08:04.736Z - Time taken for 'total execution time for createProjectGraph()' 23.464700000360608ms
+[NX Daemon Server] - 2025-04-16T14:08:16.790Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:08:16.791Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:08:16.883Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:08:23.200Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:08:23.200Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:08:23.200Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:08:23.203Z - Time taken for 'hash changed files from watcher' 0.3513000011444092ms
+[NX Daemon Server] - 2025-04-16T14:08:23.217Z - Time taken for 'build-project-configs' 12.232499999925494ms
+[NX Daemon Server] - 2025-04-16T14:08:23.246Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:08:23.247Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:08:23.247Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:08:23.247Z - Time taken for 'total execution time for createProjectGraph()' 24.041100000962615ms
+[NX Daemon Server] - 2025-04-16T14:08:54.634Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:08:54.635Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:08:54.726Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:09:01.043Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:09:01.043Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:09:01.044Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:09:01.046Z - Time taken for 'hash changed files from watcher' 0.3428999986499548ms
+[NX Daemon Server] - 2025-04-16T14:09:01.060Z - Time taken for 'build-project-configs' 11.88319999910891ms
+[NX Daemon Server] - 2025-04-16T14:09:01.088Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:09:01.088Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:09:01.088Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:09:01.088Z - Time taken for 'total execution time for createProjectGraph()' 24.446699999272823ms
+[NX Daemon Server] - 2025-04-16T14:09:42.596Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:09:42.597Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:09:42.720Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:09:49.010Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:09:49.010Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:09:49.010Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:09:49.012Z - Time taken for 'hash changed files from watcher' 0.3394999988377094ms
+[NX Daemon Server] - 2025-04-16T14:09:49.026Z - Time taken for 'build-project-configs' 11.360500000417233ms
+[NX Daemon Server] - 2025-04-16T14:09:49.052Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:09:49.053Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:09:49.053Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:09:49.053Z - Time taken for 'total execution time for createProjectGraph()' 23.068099999800324ms
+[NX Daemon Server] - 2025-04-16T14:09:55.916Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:09:55.918Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:09:56.023Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:10:02.328Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:10:02.328Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:10:02.328Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:10:02.330Z - Time taken for 'hash changed files from watcher' 0.41750000044703484ms
+[NX Daemon Server] - 2025-04-16T14:10:02.345Z - Time taken for 'build-project-configs' 12.168600000441074ms
+[NX Daemon Server] - 2025-04-16T14:10:02.372Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:10:02.373Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:10:02.373Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:10:02.373Z - Time taken for 'total execution time for createProjectGraph()' 24.29260000027716ms
+[NX Daemon Server] - 2025-04-16T14:10:20.509Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:10:20.510Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:10:20.602Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:10:26.911Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:10:26.911Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:10:26.911Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:10:26.914Z - Time taken for 'hash changed files from watcher' 0.3456999994814396ms
+[NX Daemon Server] - 2025-04-16T14:10:26.928Z - Time taken for 'build-project-configs' 12.324099998921156ms
+[NX Daemon Server] - 2025-04-16T14:10:26.955Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:10:26.956Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:10:26.956Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:10:26.956Z - Time taken for 'total execution time for createProjectGraph()' 23.891499999910593ms
+[NX Daemon Server] - 2025-04-16T14:10:55.523Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:10:55.524Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:10:55.930Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:11:01.925Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:11:01.925Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:11:01.925Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:11:01.928Z - Time taken for 'hash changed files from watcher' 0.405799999833107ms
+[NX Daemon Server] - 2025-04-16T14:11:01.945Z - Time taken for 'build-project-configs' 14.466799998655915ms
+[NX Daemon Server] - 2025-04-16T14:11:01.973Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:11:01.974Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:11:01.974Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:11:01.974Z - Time taken for 'total execution time for createProjectGraph()' 24.633099999278784ms
+[NX Daemon Server] - 2025-04-16T14:11:33.190Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:11:33.190Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:11:33.250Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:11:39.597Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:11:39.597Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:11:39.597Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:11:39.599Z - Time taken for 'hash changed files from watcher' 0.3377999998629093ms
+[NX Daemon Server] - 2025-04-16T14:11:39.613Z - Time taken for 'build-project-configs' 11.8125ms
+[NX Daemon Server] - 2025-04-16T14:11:39.632Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:11:39.632Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:11:39.632Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:11:39.632Z - Time taken for 'total execution time for createProjectGraph()' 15.060900000855327ms
+[NX Daemon Server] - 2025-04-16T14:12:01.954Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:12:01.954Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:02.047Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:03.600Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:03.601Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:12:03.662Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:05.288Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:12:05.288Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:05.349Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:08.358Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:12:08.358Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:12:08.358Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:12:08.360Z - Time taken for 'hash changed files from watcher' 0.3268999997526407ms
+[NX Daemon Server] - 2025-04-16T14:12:08.374Z - Time taken for 'build-project-configs' 11.61089999973774ms
+[NX Daemon Server] - 2025-04-16T14:12:08.402Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:12:08.402Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:12:08.402Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:12:08.402Z - Time taken for 'total execution time for createProjectGraph()' 23.42740000039339ms
+[NX Daemon Server] - 2025-04-16T14:12:22.179Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:12:22.179Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:22.536Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:12:28.584Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:12:28.584Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:12:28.584Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:12:28.587Z - Time taken for 'hash changed files from watcher' 0.37760000117123127ms
+[NX Daemon Server] - 2025-04-16T14:12:28.602Z - Time taken for 'build-project-configs' 12.516699999570847ms
+[NX Daemon Server] - 2025-04-16T14:12:28.628Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:12:28.629Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:12:28.629Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:12:28.629Z - Time taken for 'total execution time for createProjectGraph()' 23.561700001358986ms
+[NX Daemon Server] - 2025-04-16T14:15:36.050Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:15:36.050Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:15:36.143Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:15:37.628Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:15:37.630Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:15:37.690Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:15:42.458Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:15:42.458Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:15:42.458Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:15:42.460Z - Time taken for 'hash changed files from watcher' 0.3669000007212162ms
+[NX Daemon Server] - 2025-04-16T14:15:42.474Z - Time taken for 'build-project-configs' 11.371400000527501ms
+[NX Daemon Server] - 2025-04-16T14:15:42.500Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:15:42.500Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:15:42.500Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:15:42.500Z - Time taken for 'total execution time for createProjectGraph()' 23.09620000049472ms
+[NX Daemon Server] - 2025-04-16T14:16:58.208Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:16:58.210Z - [WATCHER]: libs/backend/dto/src/lib/review.dto.ts was modified
+[NX Daemon Server] - 2025-04-16T14:16:58.550Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:17:00.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:17:00.171Z - [WATCHER]: libs/backend/dto/src/lib/review.dto.ts was modified
+[NX Daemon Server] - 2025-04-16T14:17:00.232Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:17:03.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:17:03.741Z - [WATCHER]: libs/backend/user/src/lib/review/review.schema.ts was modified
+[NX Daemon Server] - 2025-04-16T14:17:03.803Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:17:04.613Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:17:04.613Z - [REQUEST]: libs/backend/dto/src/lib/review.dto.ts,libs/backend/user/src/lib/review/review.schema.ts
+[NX Daemon Server] - 2025-04-16T14:17:04.613Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:17:04.616Z - Time taken for 'hash changed files from watcher' 0.37749999947845936ms
+[NX Daemon Server] - 2025-04-16T14:17:04.632Z - Time taken for 'build-project-configs' 13.559100000187755ms
+[NX Daemon Server] - 2025-04-16T14:17:04.662Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:17:04.662Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:17:04.663Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:17:04.663Z - Time taken for 'total execution time for createProjectGraph()' 26.33019999973476ms
+[NX Daemon Server] - 2025-04-16T14:29:45.350Z - [WATCHER]: libs/backend/dto/src/lib/review.dto.ts was modified
+[NX Daemon Server] - 2025-04-16T14:29:45.350Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:29:45.739Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:29:49.161Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:29:49.162Z - [WATCHER]: libs/backend/dto/src/lib/review.dto.ts was modified
+[NX Daemon Server] - 2025-04-16T14:29:49.239Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:29:51.757Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:29:51.758Z - [REQUEST]: libs/backend/dto/src/lib/review.dto.ts
+[NX Daemon Server] - 2025-04-16T14:29:51.758Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:29:51.760Z - Time taken for 'hash changed files from watcher' 0.37670000083744526ms
+[NX Daemon Server] - 2025-04-16T14:29:51.776Z - Time taken for 'build-project-configs' 13.484600000083447ms
+[NX Daemon Server] - 2025-04-16T14:29:51.805Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:29:51.805Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:29:51.805Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:29:51.805Z - Time taken for 'total execution time for createProjectGraph()' 24.7312000002712ms
+[NX Daemon Server] - 2025-04-16T14:30:00.718Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:30:00.719Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:30:01.060Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:30:07.124Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:30:07.125Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:30:07.125Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:30:07.127Z - Time taken for 'hash changed files from watcher' 0.5148000009357929ms
+[NX Daemon Server] - 2025-04-16T14:30:07.142Z - Time taken for 'build-project-configs' 12.304700000211596ms
+[NX Daemon Server] - 2025-04-16T14:30:07.170Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:30:07.171Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:30:07.171Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:30:07.171Z - Time taken for 'total execution time for createProjectGraph()' 25.191000001505017ms
+[NX Daemon Server] - 2025-04-16T14:30:55.256Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:30:55.257Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:30:55.628Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:30:56.729Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:30:56.729Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:30:56.791Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:01.667Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:31:01.667Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:31:01.667Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:31:01.669Z - Time taken for 'hash changed files from watcher' 0.44929999858140945ms
+[NX Daemon Server] - 2025-04-16T14:31:01.684Z - Time taken for 'build-project-configs' 12.462699998170137ms
+[NX Daemon Server] - 2025-04-16T14:31:01.711Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:31:01.711Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:31:01.711Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:31:01.711Z - Time taken for 'total execution time for createProjectGraph()' 23.433999998494983ms
+[NX Daemon Server] - 2025-04-16T14:31:04.069Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:04.070Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:31:04.134Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:06.274Z - [WATCHER]: libs/backend/user/src/lib/game/game.service.ts was modified
+[NX Daemon Server] - 2025-04-16T14:31:06.274Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:06.336Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:10.480Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:31:10.480Z - [REQUEST]: libs/backend/user/src/lib/game/game.service.ts
+[NX Daemon Server] - 2025-04-16T14:31:10.480Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:31:10.482Z - Time taken for 'hash changed files from watcher' 0.4517000000923872ms
+[NX Daemon Server] - 2025-04-16T14:31:10.496Z - Time taken for 'build-project-configs' 11.793700000271201ms
+[NX Daemon Server] - 2025-04-16T14:31:10.514Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:31:10.515Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:31:10.515Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:31:10.515Z - Time taken for 'total execution time for createProjectGraph()' 14.756599999964237ms
+[NX Daemon Server] - 2025-04-16T14:31:46.634Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:31:46.634Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:47.025Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:50.767Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:31:50.767Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:50.827Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:53.049Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:31:53.049Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:31:53.049Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:31:53.052Z - Time taken for 'hash changed files from watcher' 0.3368999995291233ms
+[NX Daemon Server] - 2025-04-16T14:31:53.065Z - Time taken for 'build-project-configs' 11.250400001183152ms
+[NX Daemon Server] - 2025-04-16T14:31:53.092Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:31:53.093Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:31:53.093Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:31:53.093Z - Time taken for 'total execution time for createProjectGraph()' 23.664499999955297ms
+[NX Daemon Server] - 2025-04-16T14:31:56.403Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:31:56.404Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:31:56.776Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:32:00.112Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:32:00.113Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:32:00.188Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:32:02.807Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:32:02.807Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:32:02.807Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:32:02.809Z - Time taken for 'hash changed files from watcher' 0.3392999991774559ms
+[NX Daemon Server] - 2025-04-16T14:32:02.824Z - Time taken for 'build-project-configs' 12.538799999281764ms
+[NX Daemon Server] - 2025-04-16T14:32:02.850Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:32:02.851Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:32:02.851Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:32:02.851Z - Time taken for 'total execution time for createProjectGraph()' 23.221599999815226ms
+[NX Daemon Server] - 2025-04-16T14:32:05.489Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:32:05.490Z - [WATCHER]: libs/backend/user/src/lib/game/game.controller.ts was modified
+[NX Daemon Server] - 2025-04-16T14:32:05.599Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-04-16T14:32:11.893Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-04-16T14:32:11.893Z - [REQUEST]: libs/backend/user/src/lib/game/game.controller.ts
+[NX Daemon Server] - 2025-04-16T14:32:11.893Z - [REQUEST]: 
+[NX Daemon Server] - 2025-04-16T14:32:11.895Z - Time taken for 'hash changed files from watcher' 0.39809999987483025ms
+[NX Daemon Server] - 2025-04-16T14:32:11.912Z - Time taken for 'build-project-configs' 13.348999999463558ms
+[NX Daemon Server] - 2025-04-16T14:32:11.940Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-04-16T14:32:11.941Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-04-16T14:32:11.941Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-04-16T14:32:11.941Z - Time taken for 'total execution time for createProjectGraph()' 25.230399999767542ms

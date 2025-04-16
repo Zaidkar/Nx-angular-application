@@ -14,12 +14,14 @@ import { IGame, IReview, IUserIdentity } from '@avans-nx-workshop/shared/api';
 import {
     CreateGameDto,
     UpdateGameDto,
-    CreateReviewDto
+    CreateReviewDto,
+    UpdateReviewDto
 } from '@avans-nx-workshop/backend/dto';
 import { GameService } from './game.service';
 import { GameExistGuard } from './game-exists.guard';
 import { Game } from './game.schema';
 import { Types } from 'mongoose';
+import { Review } from '../review/review.schema';
 
 interface AuthenticatedRequest extends ExpressRequest {
     user?: IUserIdentity;
@@ -31,11 +33,13 @@ export class GameController {
 
     @Get()
     async findAll(): Promise<IGame[]> {
+        console.log('Controller: findAllGames called');
         return this.gameService.findAll();
     }
 
     @Get(':id')
     async findOne(@Param('id') id: string): Promise<IGame | null> {
+        console.log('Controller: findOneGame called. ID:', id);
         return this.gameService.findOne(id);
     }
 
@@ -60,6 +64,7 @@ export class GameController {
 
     @Post(':id/reviews')
     async addReview(@Param('id') id: string, @Body() review: CreateReviewDto) {
+        console.log('Controller: addReview called. ID:', id);
         return this.gameService.addReview(id, review);
     }
 
@@ -68,15 +73,21 @@ export class GameController {
         @Param('id') id: string,
         @Param('reviewId') reviewId: string
     ): Promise<Game | null> {
+        console.log('Controller: deleteReview called. ID:', id);
         return this.gameService.removeReview(id, reviewId);
     }
 
     @Put(':id/reviews/:reviewId')
     async updateReview(
-        @Param('id') id: string,
+        @Param('id') gameId: string,
         @Param('reviewId') reviewId: string,
-        @Body() review: CreateReviewDto
+        @Body() review: any
     ): Promise<Game | null> {
-        return this.gameService.updateReview(id, reviewId, review);
+        const { _id, ...updateFields } = review;
+        console.log(
+            'Controller: updateReview called. Update payload:',
+            updateFields
+        );
+        return this.gameService.updateReview(gameId, reviewId, updateFields);
     }
 }

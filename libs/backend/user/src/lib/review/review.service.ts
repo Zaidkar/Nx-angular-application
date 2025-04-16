@@ -25,9 +25,13 @@ export class ReviewService {
         id: string,
         updateReviewDto: UpdateReviewDto
     ): Promise<IReview | null> {
-        return this.reviewModel
+        console.log('ReviewService: update method called for review id:', id);
+        console.log('ReviewService: DTO received:', updateReviewDto);
+        const updatedReview = await this.reviewModel
             .findByIdAndUpdate(id, updateReviewDto, { new: true })
             .exec();
+        console.log('ReviewService: updated review:', updatedReview);
+        return updatedReview;
     }
 
     async delete(id: string): Promise<IReview | null> {

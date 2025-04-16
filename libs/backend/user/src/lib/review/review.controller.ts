@@ -58,6 +58,8 @@ export class ReviewController {
         @Param('id') id: string,
         @Body() updateReviewDto: UpdateReviewDto
     ): Promise<IReview | null> {
+        console.log('ReviewController: update method called with id:', id);
+        console.log('ReviewController: update payload:', updateReviewDto);
         return this.reviewService.update(id, updateReviewDto);
     }
 

@@ -6,16 +6,17 @@ import { IGame } from '@avans-nx-workshop/shared/api';
 import {
     CreateGameDto,
     CreateReviewDto,
-    UpdateGameDto
+    UpdateGameDto,
+    UpdateReviewDto
 } from '@avans-nx-workshop/backend/dto';
 import { Game, GameDocument } from './game.schema';
-import { ReviewService } from '../review/review.service'; // adjust the path as necessary
+import { ReviewService } from '../review/review.service';
 
 @Injectable()
 export class GameService {
     constructor(
         @InjectModel(Game.name) private readonly gameModel: Model<GameDocument>,
-        private readonly reviewService: ReviewService // Inject the ReviewService
+        private readonly reviewService: ReviewService
     ) {}
 
     async findAll(): Promise<Game[]> {
@@ -23,13 +24,11 @@ export class GameService {
     }
 
     async findOne(id: string): Promise<Game | null> {
-        return (
-            this.gameModel
-                .findById(id)
-                // When reviews are fully embedded, populate might not be necessary unless you want to resolve nested refs.
-                .populate('reviews.reviewer', 'name emailAddress profileImgUrl')
-                .exec()
-        );
+        return this.gameModel
+            .findById(id)
+
+            .populate('reviews.reviewer', 'name emailAddress profileImgUrl')
+            .exec();
     }
 
     async create(createGameDto: CreateGameDto): Promise<Game> {
@@ -90,13 +89,25 @@ export class GameService {
     async updateReview(
         gameId: string,
         reviewId: string,
-        reviewDto: CreateReviewDto
+        reviewDto: UpdateReviewDto
     ): Promise<Game> {
+        const updatedReview = await this.reviewService.update(
+            reviewId,
+            reviewDto
+        );
+
+        if (!updatedReview) {
+            throw new Error(`Review with id ${reviewId} not found`);
+        }
+
         const updatedGame = await this.gameModel
-            .findOneAndUpdate(
-                { _id: gameId, 'reviews._id': reviewId },
-                { $set: { 'reviews.$': reviewDto } },
-                { new: true }
+            .findByIdAndUpdate(
+                gameId,
+                { $set: { 'reviews.$[elem]': updatedReview } },
+                {
+                    new: true,
+                    arrayFilters: [{ 'elem._id': new Types.ObjectId(reviewId) }]
+                }
             )
             .exec();
 

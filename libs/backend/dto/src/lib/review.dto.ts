@@ -36,9 +36,8 @@ export class CreateReviewDto {
 }
 
 export class UpdateReviewDto {
-    _id?: string | undefined;
-
-    @IsString()
-    @IsOptional()
-    name!: string;
+    readonly title?: string;
+    readonly description?: string;
+    readonly score?: number;
+    readonly hoursPlayed?: number;
 }
