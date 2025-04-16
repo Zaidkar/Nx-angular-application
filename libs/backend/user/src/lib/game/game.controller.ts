@@ -62,4 +62,21 @@ export class GameController {
     async addReview(@Param('id') id: string, @Body() review: CreateReviewDto) {
         return this.gameService.addReview(id, review);
     }
+
+    @Delete(':id/reviews/:reviewId')
+    async deleteReview(
+        @Param('id') id: string,
+        @Param('reviewId') reviewId: string
+    ): Promise<Game | null> {
+        return this.gameService.removeReview(id, reviewId);
+    }
+
+    @Put(':id/reviews/:reviewId')
+    async updateReview(
+        @Param('id') id: string,
+        @Param('reviewId') reviewId: string,
+        @Body() review: CreateReviewDto
+    ): Promise<Game | null> {
+        return this.gameService.updateReview(id, reviewId, review);
+    }
 }

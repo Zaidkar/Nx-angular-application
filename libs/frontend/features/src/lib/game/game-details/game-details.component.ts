@@ -20,6 +20,9 @@ export class GameDetailsComponent implements OnInit, OnDestroy {
     sub?: Subscription;
     currentUser?: IUserIdentity;
 
+    editedReviewId: string | null = null;
+    editedReview: any = {};
+
     newReview: Partial<IReview & { poster?: string }> = {
         title: '',
         description: '',
@@ -57,6 +60,7 @@ export class GameDetailsComponent implements OnInit, OnDestroy {
     isUserObject(value: any): value is IUserIdentity {
         return value && typeof value === 'object' && 'emailAddress' in value;
     }
+
     deleteGame(id: string): void {
         this.sub?.add(
             this.gameService.deleteGame(id).subscribe(() => {
@@ -90,16 +94,9 @@ export class GameDetailsComponent implements OnInit, OnDestroy {
             reviewer: this.currentUser._id
         };
 
-        console.log('Review submitted:', review);
-
         this.gameService.addReview(this.game._id, review).subscribe({
             next: () => {
-                this.gameService
-                    .getGameById(String(this.gameId))
-                    .subscribe((game) => {
-                        this.game = game;
-                    });
-
+                this.refreshGame();
                 this.newReview = {
                     title: '',
                     description: '',
@@ -129,17 +126,48 @@ export class GameDetailsComponent implements OnInit, OnDestroy {
     deleteReview(reviewId: string): void {
         if (!this.game?._id) return;
 
-        // this.gameService.removeReview(this.game._id, reviewId).subscribe({
-        //     next: () => {
-        //         this.gameService
-        //             .getGameById(String(this.gameId))
-        //             .subscribe((game) => {
-        //                 this.game = game;
-        //             });
-        //     },
-        //     error: (err: any) => {
-        //         console.error('Failed to delete review', err);
-        //     }
-        // });
+        this.gameService.deleteReview(this.game._id, reviewId).subscribe({
+            next: () => this.refreshGame(),
+            error: (err: any) => {
+                console.error('Failed to delete review', err);
+            }
+        });
+    }
+
+    editReview(review: IReview): void {
+        this.editedReviewId = review._id || null;
+        this.editedReview = {
+            title: review.title,
+            description: review.description,
+            score: review.score,
+            hoursPlayed: review.hoursPlayed
+        };
+    }
+
+    cancelEdit(): void {
+        this.editedReviewId = null;
+        this.editedReview = {};
+    }
+
+    saveReview(reviewId: string): void {
+        if (!this.game?._id || !this.editedReview) return;
+
+        this.gameService
+            .updateReview(this.game._id, reviewId, this.editedReview)
+            .subscribe({
+                next: () => {
+                    this.refreshGame();
+                    this.cancelEdit();
+                },
+                error: (err: any) => {
+                    console.error('Failed to update review', err);
+                }
+            });
+    }
+
+    private refreshGame(): void {
+        this.gameService.getGameById(String(this.gameId)).subscribe((game) => {
+            this.game = game;
+        });
     }
 }

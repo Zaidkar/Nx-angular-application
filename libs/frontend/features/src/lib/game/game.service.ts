@@ -73,4 +73,49 @@ export class GameService {
                 })
             );
     }
+
+    updateReview(
+        gameId: string,
+        reviewId: string,
+        review: IReview
+    ): Observable<IGame> {
+        return this.http
+            .put<ApiResponse<IGame>>(
+                `${environment.dataApiUrl}/game/${gameId}/reviews/${reviewId}`,
+                review
+            )
+            .pipe(
+                map((response) => {
+                    const result = response.results;
+                    if (!result || Array.isArray(result)) {
+                        throw new Error(
+                            'Invalid API response for updateReview.'
+                        );
+                    }
+                    return result;
+                })
+            );
+    }
+
+    deleteReview(gameId: string, reviewId: string): Observable<IGame> {
+        return this.http
+            .delete<ApiResponse<IGame>>(
+                `${environment.dataApiUrl}/game/${gameId}/reviews/${reviewId}`
+            )
+            .pipe(
+                map((response) => {
+                    const result = response.results;
+                    if (!result || Array.isArray(result)) {
+                        throw new Error(
+                            'Invalid API response for deleteReview.'
+                        );
+                    }
+                    return result;
+                }),
+                catchError((error: HttpErrorResponse) => {
+                    console.error('Error deleting review:', error);
+                    return throwError(error);
+                })
+            );
+    }
 }

@@ -35,7 +35,7 @@ export class ReviewService {
     }
 
     async create(reviewDto: CreateReviewDto): Promise<IReview> {
-        const { ...data } = reviewDto; // This ensures _id is stripped if accidentally provided.
+        const { ...data } = reviewDto;
         return this.reviewModel.create({
             ...data,
             postDate: reviewDto.postDate || new Date()

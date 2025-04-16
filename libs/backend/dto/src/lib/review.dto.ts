@@ -35,4 +35,10 @@ export class CreateReviewDto {
     reviewer!: IUserIdentity | IUser | string;
 }
 
-export class UpdateReviewDto {}
+export class UpdateReviewDto {
+    _id?: string | undefined;
+
+    @IsString()
+    @IsOptional()
+    name!: string;
+}

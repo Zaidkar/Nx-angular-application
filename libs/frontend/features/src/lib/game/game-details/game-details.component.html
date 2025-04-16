@@ -45,98 +45,117 @@
                         <div *ngIf="(game?.reviews?.length || 0) > 0; else noReviews">
                             <div *ngFor="let review of game.reviews" class="card mb-3">
                                 <div class="card-body">
-                                    <h5>{{ review.title }}</h5>
-                                    <p>{{ review.description }}</p>
+                                    <ng-container *ngIf="editedReviewId === review._id; else viewMode">
+                                        <input class="form-control mb-2" [(ngModel)]="editedReview.title"
+                                            placeholder="Title" />
+                                        <textarea class="form-control mb-2" [(ngModel)]="editedReview.description"
+                                            placeholder="Description"></textarea>
+                                        <input class="form-control mb-2" type="number" [(ngModel)]="editedReview.score"
+                                            placeholder="Score (1-10)" min="1" max="10" />
+                                        <input class="form-control mb-2" type="number"
+                                            [(ngModel)]="editedReview.hoursPlayed" placeholder="Hours played" />
 
-                                    <div class="d-flex align-items-center text-muted mb-2">
-                                        <img *ngIf="isUserObject(review.reviewer) && review.reviewer.profileImgUrl"
-                                            [src]="review.reviewer.profileImgUrl" alt="Reviewer"
-                                            class="rounded-circle me-2" style="width: 32px; height: 32px;" />
-                                        <div>
-                                            <strong>
-                                                {{
-                                                isUserObject(review.reviewer)
-                                                ? review.reviewer.name || review.reviewer.emailAddress
-                                                : review.reviewer
-                                                }}
-                                            </strong><br />
-                                            <small>{{ review.postDate | date: 'short' }}</small>
+                                        <button class="btn btn-success me-2"
+                                            (click)="saveReview(review._id)">Save</button>
+                                        <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+                                    </ng-container>
+
+                                    <ng-template #viewMode>
+                                        <h5>{{ review.title }}</h5>
+                                        <p>{{ review.description }}</p>
+
+                                        <div class="d-flex align-items-center text-muted mb-2">
+                                            <img *ngIf="isUserObject(review.reviewer) && review.reviewer.profileImgUrl"
+                                                [src]="review.reviewer.profileImgUrl" alt="Reviewer"
+                                                class="rounded-circle me-2" style="width: 32px; height: 32px;" />
+                                            <div>
+                                                <strong>
+                                                    {{
+                                                    isUserObject(review.reviewer)
+                                                    ? review.reviewer.name || review.reviewer.emailAddress
+                                                    : review.reviewer
+                                                    }}
+                                                </strong><br />
+                                                <small>{{ review.postDate | date: 'short' }}</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div *ngIf="canDeleteReview(review)">
-                                        <button *ngIf="canEditReview(review)" class="btn btn-warning">
-                                            Edit
-                                        </button>
-                                        <button class="btn btn-danger" (click)="deleteReview(review._id!)">
-                                            Delete
-                                        </button>
-                                    </div>
+
+                                        <div *ngIf="canDeleteReview(review)">
+                                            <button *ngIf="canEditReview(review)" class="btn btn-warning me-2"
+                                                (click)="editReview(review)">Edit</button>
+                                            <button class="btn btn-danger"
+                                                (click)="deleteReview(review._id!)">Delete</button>
+                                        </div>
+
+                                        <p>
+                                            <strong>Score:</strong> {{ review.score }}/10 |
+                                            <strong>Hours played:</strong> {{ review.hoursPlayed }}
+                                        </p>
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ng-template #noReviews>
+                            <p class="text-muted">No reviews yet.</p>
+                        </ng-template>
+                    </div>
+
+
+
+                    <div class="card mt-3" *ngIf="isLoggedIn()">
+                        <div class="card-body">
+                            <h5 class="card-title">Add a Review</h5>
+
+                            <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
+
+                                <div class="form-group mb-2">
+                                    <label for="reviewTitle" class="form-label"><strong>Title:</strong></label>
+                                    <input type="text" class="form-control" id="reviewTitle" name="title"
+                                        [(ngModel)]="newReview.title" placeholder="Title" required />
                                 </div>
 
-                                <p>
-                                    <strong>Score:</strong> {{ review.score }}/10 |
-                                    <strong>Hours played:</strong> {{ review.hoursPlayed }}
-                                </p>
-                            </div>
+
+                                <div class="form-group mb-2">
+                                    <label for="reviewDescription"
+                                        class="form-label"><strong>Description:</strong></label>
+                                    <textarea class="form-control" id="reviewDescription" name="description"
+                                        [(ngModel)]="newReview.description" placeholder="Your review"
+                                        required></textarea>
+                                </div>
+
+
+                                <div class="form-group mb-2">
+                                    <label for="reviewPoster" class="form-label"><strong>Poster URL
+                                            (Optional):</strong></label>
+                                    <input type="url" class="form-control" id="reviewPoster" name="poster"
+                                        [(ngModel)]="newReview.poster" placeholder="Optional poster URL" />
+                                </div>
+
+                                <div class="form-group mb-2">
+                                    <label for="reviewHoursPlayed" class="form-label"><strong>Hours
+                                            Played:</strong></label>
+                                    <input type="number" class="form-control" id="reviewHoursPlayed" name="hoursPlayed"
+                                        [(ngModel)]="newReview.hoursPlayed" placeholder="Hours played" required />
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <label for="reviewScore" class="form-label"><strong>Score (1-10):</strong></label>
+                                    <input type="number" class="form-control" id="reviewScore" name="score"
+                                        [(ngModel)]="newReview.score" placeholder="Score (1-10)" min="1" max="10"
+                                        required />
+                                </div>
+
+                                <button type="submit" class="btn btn-success" [disabled]="reviewForm.invalid">
+                                    Submit Review
+                                </button>
+                            </form>
                         </div>
                     </div>
 
-                    <ng-template #noReviews>
-                        <p class="text-muted">No reviews yet.</p>
-                    </ng-template>
                 </div>
-
-
-
-                <div class="card mt-3" *ngIf="isLoggedIn()">
-                    <div class="card-body">
-                        <h5 class="card-title">Add a Review</h5>
-
-                        <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
-
-                            <div class="form-group mb-2">
-                                <label for="reviewTitle" class="form-label"><strong>Title:</strong></label>
-                                <input type="text" class="form-control" id="reviewTitle" name="title"
-                                    [(ngModel)]="newReview.title" placeholder="Title" required />
-                            </div>
-
-
-                            <div class="form-group mb-2">
-                                <label for="reviewDescription" class="form-label"><strong>Description:</strong></label>
-                                <textarea class="form-control" id="reviewDescription" name="description"
-                                    [(ngModel)]="newReview.description" placeholder="Your review" required></textarea>
-                            </div>
-
-
-                            <div class="form-group mb-2">
-                                <label for="reviewPoster" class="form-label"><strong>Poster URL
-                                        (Optional):</strong></label>
-                                <input type="url" class="form-control" id="reviewPoster" name="poster"
-                                    [(ngModel)]="newReview.poster" placeholder="Optional poster URL" />
-                            </div>
-
-                            <div class="form-group mb-2">
-                                <label for="reviewHoursPlayed" class="form-label"><strong>Hours Played:</strong></label>
-                                <input type="number" class="form-control" id="reviewHoursPlayed" name="hoursPlayed"
-                                    [(ngModel)]="newReview.hoursPlayed" placeholder="Hours played" required />
-                            </div>
-
-
-                            <div class="form-group mb-3">
-                                <label for="reviewScore" class="form-label"><strong>Score (1–10):</strong></label>
-                                <input type="number" class="form-control" id="reviewScore" name="score"
-                                    [(ngModel)]="newReview.score" placeholder="Score (1–10)" min="1" max="10"
-                                    required />
-                            </div>
-
-                            <button type="submit" class="btn btn-success" [disabled]="reviewForm.invalid">
-                                Submit Review
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-</div>

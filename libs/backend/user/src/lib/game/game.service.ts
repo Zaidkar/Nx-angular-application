@@ -86,4 +86,24 @@ export class GameService {
 
         return updatedGame;
     }
+
+    async updateReview(
+        gameId: string,
+        reviewId: string,
+        reviewDto: CreateReviewDto
+    ): Promise<Game> {
+        const updatedGame = await this.gameModel
+            .findOneAndUpdate(
+                { _id: gameId, 'reviews._id': reviewId },
+                { $set: { 'reviews.$': reviewDto } },
+                { new: true }
+            )
+            .exec();
+
+        if (!updatedGame) {
+            throw new Error(`Game with id ${gameId} not found`);
+        }
+
+        return updatedGame;
+    }
 }
