@@ -1,99 +1,118 @@
+import { Id } from '@avans-nx-workshop/shared/api';
+import { Type } from 'class-transformer';
 import {
     IsNotEmpty,
     IsString,
     IsOptional,
     IsDate,
     IsArray,
-    IsMongoId
+    IsMongoId,
+    IsNumber,
+    Min
 } from 'class-validator';
-import {
-    IUpdateGameEvent,
-    IUpsertGameEvent,
-    ICreateGameEvent,
-    IGameIdentity,
-    Id
-} from '@avans-nx-workshop/shared/api';
+import { Types } from 'mongoose';
 
-export class UpdateGameEventDto implements IUpdateGameEvent {
-    _id?: string;
-
-    @IsString()
+export class UpdateGameEventDto {
     @IsOptional()
+    @IsString()
     title?: string;
 
-    @IsString()
     @IsOptional()
+    @IsString()
     description?: string;
 
     @IsOptional()
+    @IsNumber()
     maxPlayers?: number;
 
-    @IsString()
     @IsOptional()
+    @IsString()
     location?: string;
 
     @IsOptional()
+    @Type(() => Date)
     @IsDate()
     startDate?: Date;
 
     @IsOptional()
-    game?: IGameIdentity;
+    @IsMongoId()
+    game?: Types.ObjectId;
 
     @IsArray()
     @IsMongoId({ each: true })
     @IsOptional()
-    participants?: Id[];
+    participants?: Types.ObjectId[];
 
-    @IsString()
     @IsOptional()
+    @IsString()
     prize?: string;
 }
 
-export class UpsertGameEventDto implements IUpsertGameEvent {
+export class UpsertGameEventDto {
     @IsNotEmpty()
+    @IsMongoId()
     _id!: Id;
 
-    @IsString()
     @IsNotEmpty()
+    @IsString()
     title!: string;
 
-    @IsString()
     @IsNotEmpty()
+    @IsString()
     description!: string;
 
     @IsNotEmpty()
+    @IsNumber()
+    @Min(1)
     maxPlayers!: number;
 
-    @IsString()
     @IsNotEmpty()
+    @IsString()
     location!: string;
 
     @IsNotEmpty()
     @IsDate()
+    @Type(() => Date)
     startDate!: Date;
 
     @IsNotEmpty()
-    game!: IGameIdentity;
+    @IsMongoId()
+    game!: Types.ObjectId;
 
     @IsArray()
     @IsMongoId({ each: true })
     @IsOptional()
-    participants!: Id[];
+    participants!: Types.ObjectId[];
 
-    @IsString()
     @IsOptional()
+    @IsString()
     prize!: string;
 }
 
-export class CreateGameEventDto implements ICreateGameEvent {
-    @IsString()
+export class CreateGameEventDto {
     @IsNotEmpty()
+    @IsString()
     title!: string;
 
-    @IsString()
+    @IsOptional()
+    maxPlayers!: number;
+    @IsOptional()
+    location!: string;
+    @IsOptional()
+    startDate!: Date;
+    @IsOptional()
+    prize!: string;
+
     @IsNotEmpty()
+    @IsString()
     description!: string;
 
     @IsNotEmpty()
-    game!: IGameIdentity;
+    @IsMongoId()
+    game!: Types.ObjectId;
+
+    @IsArray()
+    @IsMongoId({ each: true })
+    @IsOptional()
+    participants!: Types.ObjectId[];
 }

@@ -14,6 +14,8 @@ import { GameEditComponent } from './game/game-edit/game-edit.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { GameListComponent } from './game/game-list/game-list.component';
 import { GameDetailsComponent } from './game/game-details/game-details.component';
+import { GameEventDetailsComponent } from './gameEvent/gameEvent-details/gameEvent-details.component';
+import { GameEventEditComponent } from './gameEvent/gameEvent-edit/gameEvent-edit.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
@@ -25,7 +27,9 @@ import { GameDetailsComponent } from './game/game-details/game-details.component
         GameListComponent,
         LoginComponent,
         RegisterComponent,
-        GameDetailsComponent
+        GameDetailsComponent,
+        GameEventDetailsComponent,
+        GameEventEditComponent
     ],
     exports: [
         UserDetailsComponent,
@@ -35,8 +39,9 @@ import { GameDetailsComponent } from './game/game-details/game-details.component
         GameEditComponent,
         LoginComponent,
         RegisterComponent,
-
-        GameListComponent
+        GameListComponent,
+        GameEventDetailsComponent,
+        GameEventEditComponent
     ],
     providers: [UserService, provideHttpClient()]
 })

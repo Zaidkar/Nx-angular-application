@@ -4,5 +4,5 @@
 import { Id } from '@avans-nx-workshop/shared/api';
 
 export interface IEntity {
-    readonly _id: Id;
+    readonly _id: string | Id;
 }

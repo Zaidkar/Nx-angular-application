@@ -8,7 +8,9 @@ import {
     GameDetailsComponent,
     GameListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    GameEventDetailsComponent,
+    GameEventEditComponent
 } from '@avans-nx-workshop/features';
 import { AboutComponent } from './components/about/about.component';
 
@@ -26,5 +28,9 @@ export const appRoutes: Route[] = [
     { path: 'about', component: AboutComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'events/create', component: GameEventEditComponent },
+    { path: 'events/:id', component: GameEventDetailsComponent },
+
+    { path: 'events/:id/edit', component: GameEventEditComponent },
     { path: '**', redirectTo: 'dashboard' }
 ];

@@ -1,0 +1,42 @@
+<div *ngIf="!gameEvent">Loading event details...</div>
+
+<div *ngIf="gameEvent" class="container">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ gameEvent.title }}</h2>
+            <p class="card-text text-muted">{{ gameEvent.description }}</p>
+            <p><strong>Game Title:</strong> {{ gameEvent.game.title }}</p>
+            <p><strong>Start:</strong> {{ gameEvent.startDate | date:'medium' }}</p>
+            <p><strong>Location:</strong> {{ gameEvent.location }}</p>
+            <p><strong>Max Players:</strong> {{ gameEvent.maxPlayers }}</p>
+            <p><strong>Prize:</strong> {{ gameEvent.prize }}</p>
+
+            <div class="mt-3">
+                <button *ngIf="isLoggedIn() && !isParticipating()" class="btn btn-primary me-2" (click)="joinEvent()">
+                    Join Event
+                </button>
+                <button *ngIf="isLoggedIn() && isParticipating()" class="btn btn-secondary me-2" (click)="leaveEvent()">
+                    Leave Event
+                </button>
+
+                <button *ngIf="isAdmin()" class="btn btn-warning me-2" (click)="editEvent()">
+                    Edit Event
+                </button>
+                <button *ngIf="isAdmin()" class="btn btn-danger" (click)="deleteEvent()">
+                    Delete Event
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Participants</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngFor="let p of gameEvent.participants">
+                    {{ isStringParticipant(p) ? p : p.name || p.emailAddress }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

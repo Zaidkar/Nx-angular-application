@@ -5,4 +5,8 @@ export * from './lib/user/user-exists.guard';
 export * from './lib/game.module';
 export * from './lib/game/game.service';
 export * from './lib/gameEvent.module';
+export * from './lib/gameEvent/gameEvent.service';
+export * from './lib/gameEvent/gameEvent-exists.guard';
+export * from './lib/gameEvent/gameEvent.controller';
+export * from './lib/gameEvent/gameEvent.schema';
 export * from './lib/review.module';

@@ -16,7 +16,7 @@ import {
 import { GameEventService } from './gameEvent.service';
 import { GameEventExistGuard } from './gameEvent-exists.guard';
 
-@Controller('game-event')
+@Controller('game-events')
 export class GameEventController {
     constructor(private readonly gameEventService: GameEventService) {}
 
@@ -31,6 +31,7 @@ export class GameEventController {
     }
 
     @Post()
+    @UseGuards(GameEventExistGuard)
     create(
         @Body() createGameEventDto: CreateGameEventDto
     ): Promise<IGameEvent> {
@@ -38,6 +39,7 @@ export class GameEventController {
     }
 
     @Put(':id')
+    @UseGuards(GameEventExistGuard)
     update(
         @Param('id') id: string,
         @Body() updateGameEventDto: UpdateGameEventDto
@@ -46,7 +48,24 @@ export class GameEventController {
     }
 
     @Delete(':id')
+    @UseGuards(GameEventExistGuard)
     delete(@Param('id') id: string): Promise<IGameEvent | null> {
         return this.gameEventService.delete(id);
+    }
+
+    @Post(':id/join')
+    joinEvent(
+        @Param('id') id: string,
+        @Body('userId') userId: string
+    ): Promise<IGameEvent | null> {
+        return this.gameEventService.joinEvent(id, userId);
+    }
+
+    @Post(':id/leave')
+    leaveEvent(
+        @Param('id') id: string,
+        @Body('userId') userId: string
+    ): Promise<IGameEvent | null> {
+        return this.gameEventService.leaveEvent(id, userId);
     }
 }

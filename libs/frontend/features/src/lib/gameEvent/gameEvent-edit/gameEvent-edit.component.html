@@ -1,0 +1,65 @@
+<h1>Game Event Edit</h1>
+<p>Create or update a game event</p>
+
+<div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+</div>
+
+<form *ngIf="gameEvent" #eventForm="ngForm" (ngSubmit)="eventForm.form.valid && onSubmit(gameEvent)" novalidate>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" class="form-control" [(ngModel)]="gameEvent.title" required
+                    #title="ngModel" />
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control" [(ngModel)]="gameEvent.description"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="maxPlayers">Max Players</label>
+                <input type="number" id="maxPlayers" name="maxPlayers" class="form-control"
+                    [(ngModel)]="gameEvent.maxPlayers" required />
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" class="form-control" [(ngModel)]="gameEvent.location"
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="datetime-local" id="startDate" name="startDate" class="form-control"
+                    [(ngModel)]="gameEvent.startDate" required />
+            </div>
+
+            <div class="form-group">
+                <label for="prize">Prize</label>
+                <input type="text" id="prize" name="prize" class="form-control" [(ngModel)]="gameEvent.prize" />
+            </div>
+
+            <div class="form-group">
+                <label for="game">Game</label>
+                <select id="game" name="game" class="form-control" [(ngModel)]="gameEvent.game._id" required>
+                    <option [ngValue]="null" disabled>Select a game…</option>
+                    <option *ngFor="let g of games" [ngValue]="g._id">
+                        {{ g.title }}
+                    </option>
+                </select>
+            </div>
+
+            <button type="submit" [disabled]="!eventForm.valid" class="btn btn-success">
+                Submit
+            </button>
+        </div>
+
+        <div class="col-6">
+            <pre>{{ gameEvent | json }}</pre>
+        </div>
+    </div>
+</form>

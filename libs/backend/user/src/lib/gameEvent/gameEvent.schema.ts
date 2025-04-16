@@ -1,11 +1,18 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema, Types } from 'mongoose';
-import { IGameEvent } from '@avans-nx-workshop/shared/api';
+import {
+    Id,
+    IGameEvent,
+    IGameIdentity,
+    IUserRef
+} from '@avans-nx-workshop/shared/api';
+import { IsMongoId } from 'class-validator';
 
 export type GameEventDocument = GameEvent & Document;
 
 @Schema()
 export class GameEvent implements IGameEvent {
+    @IsMongoId()
     _id!: string;
 
     @Prop({ required: true })
@@ -24,13 +31,13 @@ export class GameEvent implements IGameEvent {
     startDate!: Date;
 
     @Prop({ required: true, type: MongooseSchema.Types.ObjectId, ref: 'Game' })
-    game!: any;
+    game!: IGameIdentity;
 
     @Prop({
         type: [MongooseSchema.Types.ObjectId],
         ref: 'User'
     })
-    participants!: Types.ObjectId[];
+    participants!: IUserRef[];
 
     @Prop({ required: true })
     prize!: string;
