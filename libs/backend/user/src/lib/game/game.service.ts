@@ -1,5 +1,4 @@
-// game.service.ts
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { IGame } from '@avans-nx-workshop/shared/api';
@@ -11,9 +10,11 @@ import {
 } from '@avans-nx-workshop/backend/dto';
 import { Game, GameDocument } from './game.schema';
 import { ReviewService } from '../review/review.service';
+import { ConflictException } from '@nestjs/common';
 
 @Injectable()
 export class GameService {
+    private readonly logger: Logger = new Logger(GameService.name);
     constructor(
         @InjectModel(Game.name) private readonly gameModel: Model<GameDocument>,
         private readonly reviewService: ReviewService
@@ -32,8 +33,21 @@ export class GameService {
     }
 
     async create(createGameDto: CreateGameDto): Promise<Game> {
-        const createdGame = new this.gameModel(createGameDto);
-        return createdGame.save();
+        try {
+            const createdGame = new this.gameModel(createGameDto);
+            return await createdGame.save();
+        } catch (error) {
+            if ((error as any).code === 11000) {
+                this.logger.error(
+                    `Duplicate game error: ${createGameDto.title}`
+                );
+                throw new ConflictException(
+                    'A game with this title already exists.'
+                );
+            }
+            this.logger.error(`Error creating game: ${(error as any).message}`);
+            throw error;
+        }
     }
 
     async update(

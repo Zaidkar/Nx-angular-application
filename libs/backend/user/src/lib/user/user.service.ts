@@ -5,6 +5,7 @@ import { User as UserModel, UserDocument } from './user.schema';
 import { IUser, IUserInfo } from '@avans-nx-workshop/shared/api';
 // import { Meal, MealDocument } from '@avans-nx-workshop/backend/features';
 import { CreateUserDto, UpdateUserDto } from '@avans-nx-workshop/backend/dto';
+import { ConflictException } from '@nestjs/common';
 
 @Injectable()
 export class UserService {
@@ -40,8 +41,21 @@ export class UserService {
 
     async create(user: CreateUserDto): Promise<IUserInfo> {
         this.logger.log(`Create user ${user.name}`);
-        const createdItem = this.userModel.create(user);
-        return createdItem;
+        try {
+            const createdItem = await this.userModel.create(user);
+            return createdItem;
+        } catch (error) {
+            if ((error as any).code === 11000) {
+                this.logger.error(
+                    `Duplicate email error: ${user.emailAddress}`
+                );
+                throw new ConflictException(
+                    'A user with this email already exists.'
+                );
+            }
+            this.logger.error(`Error creating user: ${(error as any).message}`);
+            throw error;
+        }
     }
 
     async update(_id: string, user: UpdateUserDto): Promise<IUserInfo | null> {

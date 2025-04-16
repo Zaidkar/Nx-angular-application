@@ -23,7 +23,7 @@ export class Game implements IGame {
     @IsMongoId()
     _id!: string;
 
-    @Prop({ required: true })
+    @Prop({ required: true, unique: true })
     title!: string;
 
     @Prop({ required: true })

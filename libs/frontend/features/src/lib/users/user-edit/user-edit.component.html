@@ -1,4 +1,8 @@
-<h1>Edit User</h1>
+<h1>User Details</h1>
+
+<div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+</div>
 
 <form *ngIf="user" #userEditForm="ngForm" (ngSubmit)="userEditForm.form.valid && onSubmit(user)" novalidate>
     <div class="row gutters-sm">
@@ -40,6 +44,16 @@
                         </div>
                         <div class="col-sm-9">
                             <input type="email" id="email" name="email" [(ngModel)]="user.emailAddress"
+                                class="form-control" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <label for="password" class="form-label">Password</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" name="password" [(ngModel)]="user.password"
                                 class="form-control" required />
                         </div>
                     </div>
@@ -104,6 +118,7 @@
         </div>
     </div>
 
+
     <div class="row">
         <div class="col text-end">
             <button type="submit" [disabled]="!userEditForm.valid || !userEditForm.form.dirty" class="btn btn-success">
@@ -112,5 +127,7 @@
         </div>
     </div>
 </form>
+
+
 
 <p *ngIf="!user">Loading...</p>

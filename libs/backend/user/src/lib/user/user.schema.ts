@@ -25,7 +25,7 @@ export class User implements IUser {
 
     @Prop({
         required: false,
-        select: false, // do not return password in select statements
+        select: false,
         type: String
     })
     password = 'secret';
@@ -35,10 +35,6 @@ export class User implements IUser {
         type: String,
         select: true,
         unique: true
-        // validate: {
-        //     validator: isEmail,
-        //     message: 'should be a valid email address'
-        // }
     })
     emailAddress = '';
 

@@ -12,6 +12,7 @@ export class UserEditComponent implements OnInit {
     userId?: string;
     user?: IUser;
     sub?: Subscription;
+    errorMessage?: string;
 
     constructor(
         private userService: UserService,
@@ -28,7 +29,7 @@ export class UserEditComponent implements OnInit {
                         return of({
                             name: '',
                             emailAddress: '',
-                            password: 'test'
+                            password: ''
                         });
                     } else {
                         this.userId = String(params.get('id'));
@@ -55,18 +56,34 @@ export class UserEditComponent implements OnInit {
         if (this.userId) {
             user._id = this.userId;
             this.sub?.add(
-                this.userService.updateUser(user).subscribe(() => {
-                    console.log('update');
-                    this.router.navigate(['../../' + this.userId], {
-                        relativeTo: this.route
-                    });
+                this.userService.updateUser(user).subscribe({
+                    next: () => {
+                        console.log('update');
+                        this.router.navigate(['../../' + this.userId], {
+                            relativeTo: this.route
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Update error:', err);
+                        this.errorMessage =
+                            err.error?.message ||
+                            'An error occurred while updating the user.';
+                    }
                 })
             );
         } else {
             this.sub?.add(
-                this.userService.createUser(user).subscribe(() => {
-                    console.log('create');
-                    this.router.navigate(['..'], { relativeTo: this.route });
+                this.userService.createUser(user).subscribe({
+                    next: () => {
+                        console.log('create');
+                        this.router.navigate(['/login']);
+                    },
+                    error: (err) => {
+                        console.error('Create error:', err);
+                        this.errorMessage =
+                            err.error?.message ||
+                            'An error occurred while creating the user.';
+                    }
                 })
             );
         }

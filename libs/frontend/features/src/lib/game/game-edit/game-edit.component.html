@@ -1,6 +1,10 @@
 <h1>Game Edit</h1>
 <p>Game edit works</p>
 
+<div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+</div>
+
 <form *ngIf="game" #gameEditForm="ngForm" (ngSubmit)="gameEditForm.form.valid && onSubmit(game)" novalidate>
     <div class="row">
         <div class="col-4">
